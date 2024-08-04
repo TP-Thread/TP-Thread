@@ -1,16 +1,26 @@
-## Hi there 👋
+# 1. 项目架构
 
-<!--
-**TP-Thread/TP-Thread** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## * algorithms
+## * boards
 
-Here are some ideas to get you started:
+##### * robomaster-c
+## * drivers
+##### * can
+##### * gps
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+##### * imu
+## * threads
+##### * tp\_thread.c/h
+
+##### * tasks
+# 2. 功能需求
+
+## * UART 接收解析
+## * SBUS 信号解析
+## * ADC 检测电压
+## * PWM 控制舵机角度
+## * CAN 电机闭环调速
+## * OLED 监测信息
+## * IMU 融合
+## * UART 反馈信息
+# 3. 
