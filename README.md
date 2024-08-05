@@ -33,4 +33,4 @@ TP-Thread is an embedded system designed to achieve the required functions in th
 
 ## 3. Maintainer
 
-- [Vic](https://github.com/TP-Thread) ，邮箱：<TP-Thread@outlook.com>
+- [TP-Thread](https://github.com/TP-Thread) ，邮箱：<TP-Thread@outlook.com>
