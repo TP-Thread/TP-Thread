@@ -6,7 +6,8 @@
 #include "tx_api.h"
 
 /* Private includes ----------------------------------------------------------*/
-#include "task_chassis.h"
+#include "task_index.h"
+#include "task_mixer.h"
 #include "task_vin.h"
 
 /* Exported functions prototypes ---------------------------------------------*/

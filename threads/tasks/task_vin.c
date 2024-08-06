@@ -13,7 +13,7 @@
  * @brief	vin 任务,测量电压
  * @param	argument: NULL
  */
-VOID vin_entry(ULONG thread_input)
+VOID Vin_Entry(ULONG thread_input)
 {
 
   VOL_ScaleSet();

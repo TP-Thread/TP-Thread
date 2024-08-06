@@ -76,6 +76,17 @@ void Error_Handler(void);
 #define KEY_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
+#define LED_R_On() HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_SET)
+#define LED_R_Off() HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_RESET)
+#define LED_R_Toggle() HAL_GPIO_TogglePin(LED_R_GPIO_Port, LED_R_Pin)
+
+#define LED_G_On() HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_SET)
+#define LED_G_Off() HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_RESET)
+#define LED_G_Toggle() HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin)
+
+#define LED_B_On() HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_SET)
+#define LED_B_Off() HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_RESET)
+#define LED_B_Toggle() HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin)
 
 /* USER CODE END Private defines */
 

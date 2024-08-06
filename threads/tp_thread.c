@@ -8,13 +8,16 @@
 #include "tp_thread.h"
 
 /* Private define ------------------------------------------------------------*/
-static UCHAR Trace_BUF[1024]; // 0X1000
+UCHAR Trace_BUF[5120];	// Can't set it too big
 
-TX_THREAD Chassis_TCB;
-CHAR Chassis_STK[512];
+TX_THREAD Index_TCB;
+CHAR Index_STK[512];
+
+TX_THREAD Mixer_TCB;
+CHAR Mixer_STK[512];
 
 TX_THREAD Vin_TCB;
-CHAR Vin_STK[512];
+CHAR Vin_STK[1024];
 
 /* Private function prototypes -----------------------------------------------*/
 /**
@@ -23,11 +26,14 @@ CHAR Vin_STK[512];
   */
 VOID TP_Thread_Init(VOID)
 {
-	tx_trace_enable(Trace_BUF, 1024, 30);
+	tx_trace_enable(Trace_BUF, 5120, 30);
 
-	tx_thread_create(&Chassis_TCB, "Chassis", chassis_entry, 0, Chassis_STK, 512, 1, 1,
+	tx_thread_create(&Index_TCB, "Index", Index_Entry, 0, Index_STK, 512, 1, 1,
+					 TX_NO_TIME_SLICE, TX_AUTO_START);
+	
+	tx_thread_create(&Mixer_TCB, "Mixer", Mixer_Entry, 0, Mixer_STK, 512, 1, 1,
 					 TX_NO_TIME_SLICE, TX_AUTO_START);
 
-	tx_thread_create(&Vin_TCB, "Voltage", vin_entry, 0, Vin_STK, 512, 4, 4,
+	tx_thread_create(&Vin_TCB, "Voltage", Vin_Entry, 0, Vin_STK, 1024, 4, 4,
 					 TX_NO_TIME_SLICE, TX_AUTO_START);
 }

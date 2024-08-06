@@ -1,8 +1,8 @@
 #ifndef TASK_VIN_H
 #define TASK_VIN_H
 
-#include "task_chassis.h"
+#include "tp_thread.h"
 
-VOID vin_entry(ULONG thread_input);
+VOID Vin_Entry(ULONG thread_input);
 
 #endif
