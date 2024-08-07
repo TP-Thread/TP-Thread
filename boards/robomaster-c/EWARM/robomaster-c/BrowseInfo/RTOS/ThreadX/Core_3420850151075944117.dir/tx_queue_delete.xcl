@@ -25,13 +25,13 @@ E:\TP-Thread\boards\robomaster-c\EWARM/../Middlewares/ST/threadx/common/inc/
 -I
 E:\TP-Thread\boards\robomaster-c\EWARM/../Middlewares/ST/threadx/ports/cortex_m4/iar/inc/
 -I
-E:\TP-Thread\boards\robomaster-c\Bsp
+E:\TP-Thread\boards\robomaster-c\EWARM\..\Bsp
 -I
-E:\TP-Thread\drivers\can
+E:\TP-Thread\boards\robomaster-c\EWARM\..\..\..\drivers\can
 -I
-E:\TP-Thread\threads
+E:\TP-Thread\boards\robomaster-c\EWARM\..\..\..\threads
 -I
-E:\TP-Thread\threads\tasks
+E:\TP-Thread\boards\robomaster-c\EWARM\..\..\..\threads\tasks
 -I
 D:\EIDE\EWARM\arm\inc\c\aarch32
 -I

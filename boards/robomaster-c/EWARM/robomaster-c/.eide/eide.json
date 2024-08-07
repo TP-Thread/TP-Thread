@@ -62,28 +62,28 @@
             "name": "User",
             "files": [
               {
-                "path": "${PROJ_DIR}/../../../threads/tp_thread.c"
-              },
-              {
-                "path": "${PROJ_DIR}/../Src/main.c"
-              },
-              {
-                "path": "${PROJ_DIR}/../Src/tx_initialize_low_level.s"
+                "path": "${PROJ_DIR}/../Src/app_azure_rtos.c"
               },
               {
                 "path": "${PROJ_DIR}/../Src/app_threadx.c"
               },
               {
-                "path": "${PROJ_DIR}/../Src/app_azure_rtos.c"
-              },
-              {
-                "path": "${PROJ_DIR}/../Src/stm32f4xx_it.c"
+                "path": "${PROJ_DIR}/../Src/main.c"
               },
               {
                 "path": "${PROJ_DIR}/../Src/stm32f4xx_hal_msp.c"
               },
               {
                 "path": "${PROJ_DIR}/../Src/stm32f4xx_hal_timebase_tim.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Src/stm32f4xx_it.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../../../threads/tp_thread.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Src/tx_initialize_low_level.s"
               }
             ],
             "folders": []
@@ -107,19 +107,28 @@
             "name": "STM32F4xx_HAL_Driver",
             "files": [
               {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"
+              },
+              {
                 "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c"
               },
               {
                 "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c"
               },
               {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c"
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c"
               },
               {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c"
               },
               {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c"
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c"
               },
               {
                 "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c"
@@ -134,28 +143,16 @@
                 "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"
               },
               {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"
-              },
-              {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c"
-              },
-              {
                 "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c"
               },
               {
                 "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"
               },
               {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c"
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"
               },
               {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"
-              },
-              {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c"
-              },
-              {
-                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c"
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c"
               },
               {
                 "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c"
@@ -165,6 +162,9 @@
               },
               {
                 "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c"
               }
             ],
             "folders": []
@@ -182,45 +182,6 @@
               {
                 "name": "RTOS/ThreadX/Core",
                 "files": [
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_context_restore.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_context_save.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_interrupt_control.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_interrupt_disable.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_interrupt_restore.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_schedule.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_stack_build.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_system_return.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_timer_interrupt.s"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_initialize_high_level.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_initialize_kernel_setup.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_iar.c"
-                  },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_block_allocate.c"
                   },
@@ -295,6 +256,18 @@
                   },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_event_flags_set_notify.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_iar.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_initialize_high_level.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_initialize_kernel_setup.c"
                   },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_mutex_cleanup.c"
@@ -387,6 +360,12 @@
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_semaphore_put_notify.c"
                   },
                   {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_context_restore.s"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_context_save.s"
+                  },
+                  {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_create.c"
                   },
                   {
@@ -405,6 +384,15 @@
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_initialize.c"
                   },
                   {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_interrupt_control.s"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_interrupt_disable.s"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_interrupt_restore.s"
+                  },
+                  {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_preemption_change.c"
                   },
                   {
@@ -420,6 +408,9 @@
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_resume.c"
                   },
                   {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_schedule.s"
+                  },
+                  {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_shell_entry.c"
                   },
                   {
@@ -427,6 +418,9 @@
                   },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_stack_build.s"
                   },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_stack_error_handler.c"
@@ -442,6 +436,9 @@
                   },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_system_resume.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_thread_system_return.s"
                   },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_thread_system_suspend.c"
@@ -466,6 +463,42 @@
                   },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_time_set.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_activate.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_change.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_create.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_deactivate.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_delete.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_expiration_process.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_info_get.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_initialize.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/src/tx_timer_interrupt.s"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_system_activate.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_thread_entry.c"
                   },
                   {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/txe_block_allocate.c"
@@ -630,39 +663,6 @@
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/txe_thread_wait_abort.c"
                   },
                   {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_activate.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_change.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_create.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_deactivate.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_delete.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_expiration_process.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_info_get.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_initialize.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_system_activate.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.c"
-                  },
-                  {
-                    "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/tx_timer_thread_entry.c"
-                  },
-                  {
                     "path": "${PROJ_DIR}/../Middlewares/ST/threadx/common/src/txe_timer_activate.c"
                   },
                   {
@@ -776,10 +776,10 @@
           "${PROJ_DIR}/../Drivers/CMSIS/Include",
           "${PROJ_DIR}/../Middlewares/ST/threadx/common/inc",
           "${PROJ_DIR}/../Middlewares/ST/threadx/ports/cortex_m4/iar/inc",
-          "../../Bsp",
-          "../../../../drivers/can",
-          "../../../../threads",
-          "../../../../threads/tasks"
+          "${PROJ_DIR}/../Bsp",
+          "${PROJ_DIR}/../../../drivers/can",
+          "${PROJ_DIR}/../../../threads",
+          "${PROJ_DIR}/../../../threads/tasks"
         ],
         "libList": [],
         "defineList": [
