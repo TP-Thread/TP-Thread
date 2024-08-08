@@ -362,9 +362,9 @@
                     <state>$PROJ_DIR$/../Middlewares/ST/threadx/common/inc/</state>
                     <state>$PROJ_DIR$/../Middlewares/ST/threadx/ports/cortex_m4/iar/inc/</state>
                     <state>$PROJ_DIR$\..\Bsp</state>
-                    <state>$PROJ_DIR$\..\..\..\drivers\can</state>
                     <state>$PROJ_DIR$\..\..\..\threads</state>
                     <state>$PROJ_DIR$\..\..\..\threads\tasks</state>
+                    <state>$PROJ_DIR$\..\..\..\drivers\can</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1119,10 +1119,10 @@
                 <name>$PROJ_DIR$\..\Bsp\bsp_vin.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\..\Drivers\can\drv_can.c</name>
+                <name>$PROJ_DIR$\..\..\..\drivers\can\drv_can.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\..\Drivers\can\drv_can_cmd.c</name>
+                <name>$PROJ_DIR$\..\..\..\drivers\can\drv_can_cmd.c</name>
             </file>
         </group>
         <group>
@@ -1134,13 +1134,13 @@
         <group>
             <name>Task</name>
             <file>
-                <name>$PROJ_DIR$\..\..\..\Threads\tasks\task_index.c</name>
+                <name>$PROJ_DIR$\..\..\..\threads\tasks\task_index.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\..\Threads\tasks\task_mixer.c</name>
+                <name>$PROJ_DIR$\..\..\..\threads\tasks\task_mixer.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\..\Threads\tasks\task_vin.c</name>
+                <name>$PROJ_DIR$\..\..\..\threads\tasks\task_vin.c</name>
             </file>
         </group>
         <group>
@@ -1164,7 +1164,7 @@
                 <name>$PROJ_DIR$\..\Src\stm32f4xx_it.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\..\Threads\tp_thread.c</name>
+                <name>$PROJ_DIR$\..\..\..\threads\tp_thread.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Src\tx_initialize_low_level.s</name>

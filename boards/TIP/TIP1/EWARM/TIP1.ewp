@@ -2,7 +2,7 @@
 <project>
     <fileVersion>4</fileVersion>
     <configuration>
-        <name>TIP1</name>
+        <name>tip1</name>
         <toolchain>
             <name>ARM</name>
         </toolchain>
@@ -16,19 +16,19 @@
                 <debug>1</debug>
                 <option>
                     <name>BrowseInfoPath</name>
-                    <state>TIP1\BrowseInfo</state>
+                    <state>tip1\BrowseInfo</state>
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>TIP1/Exe</state>
+                    <state>tip1/Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>TIP1/Obj</state>
+                    <state>tip1/Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>TIP1/List</state>
+                    <state>tip1/List</state>
                 </option>
                 <option>
                     <name>GEndianMode</name>
@@ -62,7 +62,7 @@
                 </option>
                 <option>
                     <name>RTDescription</name>
-                    <state>Use the full configuration of the C/C++ runtime library. Full locale interface, C locale, file descriptor support, multibytes in printf and scanf, and hex floats in strtod.</state>
+                    <state>A complete configuration of the C/C++14 runtime library. Full locale interface, C locale, file descriptor support, multibytes in printf and scanf, and hex floats in strtod.</state>
                 </option>
                 <option>
                     <name>OGProductVersion</name>
@@ -189,7 +189,7 @@
                 <option>
                     <name>TrustZoneModes</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>OGAarch64Abi</name>
@@ -201,7 +201,7 @@
                 </option>
                 <option>
                     <name>BuildFilesPath</name>
-                    <state>TIP1</state>
+                    <state>tip1</state>
                 </option>
                 <option>
                     <name>PointerAuthentication</name>
@@ -362,9 +362,9 @@
                     <state>$PROJ_DIR$/../Middlewares/ST/threadx/common/inc/</state>
                     <state>$PROJ_DIR$/../Middlewares/ST/threadx/ports/cortex_m4/iar/inc/</state>
                     <state>$PROJ_DIR$\..\Bsp</state>
-                    <state>$PROJ_DIR$\..\..\..\..\Threads</state>
-                    <state>$PROJ_DIR$\..\..\..\..\Threads\tasks</state>
-                    <state>$PROJ_DIR$\..\..\..\..\Drivers\can</state>
+                    <state>$PROJ_DIR$\..\..\..\..\threads</state>
+                    <state>$PROJ_DIR$\..\..\..\..\threads\tasks</state>
+                    <state>$PROJ_DIR$\..\..\..\..\drivers\can</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -674,7 +674,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>TIP1.hex</state>
+                    <state>tip1.hex</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -705,7 +705,7 @@
                 <debug>1</debug>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>TIP1.out</state>
+                    <state>tip1.out</state>
                 </option>
                 <option>
                     <name>IlinkLibIOConfig</name>
@@ -1010,7 +1010,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>TIP1_import_lib.o</state>
+                    <state>tip1_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>

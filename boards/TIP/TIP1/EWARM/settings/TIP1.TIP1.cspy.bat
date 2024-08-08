@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\Boards\TIP\TIP1\EWARM\settings\TIP1.TIP1.general.xcl" --backend -f "E:\TP-Thread\Boards\TIP\TIP1\EWARM\settings\TIP1.TIP1.driver.xcl" 
+"D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\boards\tip\tip1\EWARM\settings\tip1.tip1.general.xcl" --backend -f "E:\TP-Thread\boards\tip\tip1\EWARM\settings\tip1.tip1.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\Boards\TIP\TIP1\EWARM\settings\TIP1.TIP1.general.xcl" "--debug_file=%~1" --backend -f "E:\TP-Thread\Boards\TIP\TIP1\EWARM\settings\TIP1.TIP1.driver.xcl" 
+"D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\boards\tip\tip1\EWARM\settings\tip1.tip1.general.xcl" "--debug_file=%~1" --backend -f "E:\TP-Thread\boards\tip\tip1\EWARM\settings\tip1.tip1.driver.xcl" 
 
 @echo off 
 :end

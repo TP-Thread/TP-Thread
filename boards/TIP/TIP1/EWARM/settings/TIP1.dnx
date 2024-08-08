@@ -23,18 +23,10 @@
     <PlDriver>
         <MemConfigValue>D:\EIDE\EWARM\arm\config\debugger\ST\STM32F407VG.ddf</MemConfigValue>
     </PlDriver>
-    <StLinkDriver>
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
-        <CStepIntDis>_ 0</CStepIntDis>
-    </StLinkDriver>
     <ArmDriver>
         <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
     </ArmDriver>
-    <JLinkDriver>
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
-        <CStepIntDis>_ 0</CStepIntDis>
-    </JLinkDriver>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>

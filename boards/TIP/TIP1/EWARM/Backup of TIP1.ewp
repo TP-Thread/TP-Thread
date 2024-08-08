@@ -2,7 +2,7 @@
 <project>
   <fileVersion>3</fileVersion>
   <configuration>
-    <name>TIP1</name>
+    <name>tip1</name>
     <toolchain>
       <name>ARM</name>
     </toolchain>
@@ -16,15 +16,15 @@
         <debug>1</debug>
         <option>
           <name>ExePath</name>
-          <state>TIP1/Exe</state>
+          <state>tip1/Exe</state>
         </option>
         <option>
           <name>ObjPath</name>
-          <state>TIP1/Obj</state>
+          <state>tip1/Obj</state>
         </option>
         <option>
           <name>ListPath</name>
-          <state>TIP1/List</state>
+          <state>tip1/List</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -662,7 +662,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state>TIP1.hex</state>
+          <state>tip1.hex</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -705,7 +705,7 @@
         <debug>1</debug>
         <option>
           <name>IlinkOutputFile</name>
-          <state>TIP1.out</state>
+          <state>tip1.out</state>
         </option>
         <option>
           <name>IlinkLibIOConfig</name>

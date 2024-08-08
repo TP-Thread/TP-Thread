@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\Boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.general.xcl" --backend -f "E:\TP-Thread\Boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.driver.xcl" 
+& "D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.general.xcl" --backend -f "E:\TP-Thread\boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.driver.xcl" 
 }
 else
 {
-& "D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\Boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.general.xcl" --debug_file=$debugfile --backend -f "E:\TP-Thread\Boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.driver.xcl" 
+& "D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.general.xcl" --debug_file=$debugfile --backend -f "E:\TP-Thread\boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.driver.xcl" 
 }

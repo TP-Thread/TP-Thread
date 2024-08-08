@@ -2,7 +2,7 @@
 <project>
 	<fileVersion>3</fileVersion>
 	<configuration>
-		<name>TIP1</name>
+		<name>tip1</name>
 		<toolchain>
 			<name>ARM</name>
 		</toolchain>
