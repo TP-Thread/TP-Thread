@@ -1,0 +1,15 @@
+"D:\EIDE\EWARM\arm\bin\armPROC.dll" 
+
+"D:\EIDE\EWARM\arm\bin\armSTLINK.dll" 
+
+"E:\TP-Thread\Boards\ZIN\EWARM\ZIN\Exe\ZIN.out" 
+
+--plugin="D:\EIDE\EWARM\arm\bin\armLibSupportUniversal.dll" 
+
+--device_macro="D:\EIDE\EWARM\arm/config/debugger/ST/STM32F1xx.dmac" 
+
+--flash_loader="D:\EIDE\EWARM\arm/config/flashloader/ST/FlashSTM32F10xx8.board" 
+
+
+
+
