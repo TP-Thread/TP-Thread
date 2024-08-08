@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.general.xcl" --backend -f "E:\TP-Thread\boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.driver.xcl" 
+"D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\Boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.general.xcl" --backend -f "E:\TP-Thread\Boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.general.xcl" "--debug_file=%~1" --backend -f "E:\TP-Thread\boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.driver.xcl" 
+"D:\EIDE\EWARM\common\bin\cspybat" -f "E:\TP-Thread\Boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.general.xcl" "--debug_file=%~1" --backend -f "E:\TP-Thread\Boards\robomaster-c\EWARM\settings\robomaster-c.robomaster-c.driver.xcl" 
 
 @echo off 
 :end
