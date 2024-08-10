@@ -62,6 +62,10 @@ extern DMA_HandleTypeDef hdma_usart1_rx;
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
+#define THREAD_INDEX
+#define THREAD_MIXER
+#define THREAD_VIN
+
 #define DRV_CAN1
 // #define DRV_CAN2
 

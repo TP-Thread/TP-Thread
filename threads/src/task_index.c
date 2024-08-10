@@ -17,7 +17,7 @@ VOID Index_Entry(ULONG thread_input)
 {
     while (1)
     {
-        LED_G_Toggle();
+        LED_R_Toggle();
         printf("Index\n");
         tx_thread_sleep(1000);
     }

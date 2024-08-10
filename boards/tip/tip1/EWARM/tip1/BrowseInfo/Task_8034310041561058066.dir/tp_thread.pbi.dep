@@ -36,13 +36,15 @@ E:\TP-Thread\boards\tip\tip1\EWARM\tip1\BrowseInfo\Task_8034310041561058066.dir\
   E:\TP-Thread\boards\tip\tip1\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
   E:\TP-Thread\boards\tip\tip1\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   E:\TP-Thread\boards\tip\tip1\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
+  E:\TP-Thread\boards\tip\tip1\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
+  E:\TP-Thread\boards\tip\tip1\EWARM\..\Bsp\Inc\bsp_sbus.h \
+  D:\EIDE\EWARM\arm\inc\c\stdio.h D:\EIDE\EWARM\arm\inc\c\string.h \
+  D:\EIDE\EWARM\arm\inc\c\DLib_Product_string.h \
+  D:\EIDE\EWARM\arm\inc\c\stdlib.h \
+  D:\EIDE\EWARM\arm\inc\c\DLib_Product_stdlib.h \
   E:\TP-Thread\boards\tip\tip1\EWARM\..\Middlewares\ST\threadx\common\inc\tx_api.h \
   E:\TP-Thread\boards\tip\tip1\EWARM\..\Middlewares\ST\threadx\ports\cortex_m4\iar\inc\tx_port.h \
   E:\TP-Thread\boards\tip\tip1\EWARM\..\Inc\tx_user.h \
-  D:\EIDE\EWARM\arm\inc\c\stdlib.h \
-  D:\EIDE\EWARM\arm\inc\c\DLib_Product_stdlib.h \
-  D:\EIDE\EWARM\arm\inc\c\string.h \
-  D:\EIDE\EWARM\arm\inc\c\DLib_Product_string.h \
   D:\EIDE\EWARM\arm\inc\c\aarch32\intrinsics.h \
   D:\EIDE\EWARM\arm\inc\c\aarch32\iar_intrinsics_common.h \
   E:\TP-Thread\boards\tip\tip1\EWARM\..\..\..\..\threads\inc\task_index.h \

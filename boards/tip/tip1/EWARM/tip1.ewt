@@ -1462,9 +1462,24 @@
     <group>
         <name>Application</name>
         <group>
+            <name>Bsp</name>
+            <file>
+                <name>$PROJ_DIR$\..\Bsp\Src\bsp_sbus.c</name>
+            </file>
+        </group>
+        <group>
             <name>EWARM</name>
             <file>
                 <name>$PROJ_DIR$\startup_stm32f407xx.s</name>
+            </file>
+        </group>
+        <group>
+            <name>Task</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\threads\src\task_index.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\threads\src\tp_thread.c</name>
             </file>
         </group>
         <group>
@@ -1546,6 +1561,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</name>
             </file>
         </group>
     </group>

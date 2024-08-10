@@ -1,6 +1,7 @@
-E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\robomaster-a\BrowseInfo\Bsp_10722525046310048484.dir\bsp_uart.pbi: \
-  E:\TP-Thread\boards\robomaster\robomaster-a\Bsp\Src\bsp_uart.c \
-  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Bsp\Inc\bsp_uart.h \
+E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\robomaster-a\BrowseInfo\Task_8034310041561058066.dir\task_index.pbi: \
+  E:\TP-Thread\threads\src\task_index.c \
+  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\..\..\..\threads\inc\task_index.h \
+  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\..\..\..\threads\inc\tp_thread.h \
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Inc\main.h \
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Inc\stm32f4xx_hal_conf.h \
@@ -42,11 +43,18 @@ E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\robomaster-a\BrowseInfo\Bsp_10
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Bsp\Inc\bsp_key.h \
+  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Bsp\Inc\bsp_uart.h \
+  D:\EIDE\EWARM\arm\inc\c\stdio.h \
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Bsp\Inc\bsp_sbus.h \
-  D:\EIDE\EWARM\arm\inc\c\stdio.h D:\EIDE\EWARM\arm\inc\c\string.h \
+  D:\EIDE\EWARM\arm\inc\c\string.h \
   D:\EIDE\EWARM\arm\inc\c\DLib_Product_string.h \
   D:\EIDE\EWARM\arm\inc\c\stdlib.h \
   D:\EIDE\EWARM\arm\inc\c\DLib_Product_stdlib.h \
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Bsp\Inc\bsp_vin.h \
   E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\..\..\..\drivers\inc\drv_can.h \
-  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\..\..\..\drivers\inc\drv_can_cmd.h
+  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\..\..\..\drivers\inc\drv_can_cmd.h \
+  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Middlewares\ST\threadx\common\inc\tx_api.h \
+  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Middlewares\ST\threadx\ports\cortex_m4\iar\inc\tx_port.h \
+  E:\TP-Thread\boards\robomaster\robomaster-a\EWARM\..\Inc\tx_user.h \
+  D:\EIDE\EWARM\arm\inc\c\aarch32\intrinsics.h \
+  D:\EIDE\EWARM\arm\inc\c\aarch32\iar_intrinsics_common.h
