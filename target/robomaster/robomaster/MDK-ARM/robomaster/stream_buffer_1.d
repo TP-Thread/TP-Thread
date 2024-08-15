@@ -1,0 +1,14 @@
+robomaster\stream_buffer_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+robomaster\stream_buffer_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster\stream_buffer_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+robomaster\stream_buffer_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+robomaster\stream_buffer_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster\stream_buffer_1.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster\stream_buffer_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+robomaster\stream_buffer_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+robomaster\stream_buffer_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+robomaster\stream_buffer_1.o: ../../../../rtos/tp-thread/inc/portmacro.h
+robomaster\stream_buffer_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+robomaster\stream_buffer_1.o: ../../../../rtos/tp-thread/inc/task.h
+robomaster\stream_buffer_1.o: ../../../../rtos/tp-thread/inc/list.h
+robomaster\stream_buffer_1.o: ../../../../rtos/tp-thread/inc/stream_buffer.h

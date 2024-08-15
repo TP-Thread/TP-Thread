@@ -1,0 +1,14 @@
+robomaster\stream_buffer.o: ..\..\..\..\rtos\tp-thread\src\stream_buffer.c
+robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/projdefs.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/portable.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/portmacro.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/mpu_wrappers.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/task.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/list.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/stream_buffer.h

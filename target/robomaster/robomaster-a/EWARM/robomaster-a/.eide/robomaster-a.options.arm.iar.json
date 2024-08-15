@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "beforeBuildTasks": [],
+    "afterBuildTasks": [],
+    "global": {
+        "endian-mode": "little",
+        "runtime-lib": "full",
+        "printf-formatter": "auto",
+        "scanf-formatter": "auto",
+        "output-debug-info": "enable"
+    },
+    "c/cpp-compiler": {
+        "optimization": "size",
+        "destroy-cpp-static-object": true,
+        "language-c": "c99",
+        "language-conformance": "IAR-extensions",
+        "floating-point-semantics": "strict",
+        "language-cpp": "Extended-EC++"
+    },
+    "asm-compiler": {
+        "case-sensitive-user-symbols": true,
+        "misc-controls": "-IE:\\TP-Thread\\target\\robomaster\\robomaster-a\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\IAR\\ARM_CM4F\\"
+    },
+    "linker": {
+        "output-format": "elf",
+        "auto-search-runtime-lib": true,
+        "perform-cpp-virtual-func-elimination": "enable"
+    }
+}

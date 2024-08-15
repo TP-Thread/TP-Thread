@@ -1,0 +1,15 @@
+robomaster\queue_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+robomaster\queue_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+robomaster\queue_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+robomaster\queue_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+robomaster\queue_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster\queue_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster\queue_1.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster\queue_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+robomaster\queue_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+robomaster\queue_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+robomaster\queue_1.o: ../../../../rtos/tp-thread/inc/portmacro.h
+robomaster\queue_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+robomaster\queue_1.o: ../../../../rtos/tp-thread/inc/task.h
+robomaster\queue_1.o: ../../../../rtos/tp-thread/inc/list.h
+robomaster\queue_1.o: ../../../../rtos/tp-thread/inc/queue.h

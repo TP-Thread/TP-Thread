@@ -117,7 +117,7 @@ void Index_Entry(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    LED_G_Toggle();
+	LED_R_Toggle();
     osDelay(1000);
   }
   /* USER CODE END Index_Entry */

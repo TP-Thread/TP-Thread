@@ -1,0 +1,15 @@
+robomaster\queue.o: ..\..\..\..\rtos\tp-thread\src\queue.c
+robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/projdefs.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/portable.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/portmacro.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/mpu_wrappers.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/task.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/list.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/queue.h

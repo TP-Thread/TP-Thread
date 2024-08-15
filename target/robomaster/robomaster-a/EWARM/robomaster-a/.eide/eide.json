@@ -1,0 +1,250 @@
+{
+  "name": "robomaster-a",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "folders": [
+      {
+        "name": "Application",
+        "files": [],
+        "folders": [
+          {
+            "name": "EWARM",
+            "files": [
+              {
+                "path": "${PROJ_DIR}/startup_stm32f427xx.s"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "User",
+            "files": [],
+            "folders": [
+              {
+                "name": "Core",
+                "files": [
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/adc.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/can.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/dma.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/freertos.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/gpio.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/main.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/stm32f4xx_hal_msp.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/stm32f4xx_hal_timebase_tim.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/stm32f4xx_it.c"
+                  },
+                  {
+                    "path": "${PROJ_DIR}/../Core/Src/usart.c"
+                  }
+                ],
+                "folders": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Drivers",
+        "files": [],
+        "folders": [
+          {
+            "name": "CMSIS",
+            "files": [
+              {
+                "path": "${PROJ_DIR}/../Core/Src/system_stm32f4xx.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "STM32F4xx_HAL_Driver",
+            "files": [
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "Middlewares",
+        "files": [],
+        "folders": [
+          {
+            "name": "FreeRTOS",
+            "files": [
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/croutine.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/list.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/port.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/portasm.s"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/queue.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/tasks.c"
+              },
+              {
+                "path": "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/timers.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      }
+    ],
+    "files": []
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "2d3cb61e10586a02c965c7e5c4029e8a"
+  },
+  "targets": {
+    "robomaster-a": {
+      "excludeList": [],
+      "toolchain": "IAR_ARM",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "scatterFilePath": "${PROJ_DIR}/stm32f427xx_flash.icf",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "ST",
+          "cpuName": "STM32F427II"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "${PROJ_DIR}/../Core/Inc",
+          "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Inc",
+          "${PROJ_DIR}/../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+          "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/include",
+          "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+          "${PROJ_DIR}/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F",
+          "${PROJ_DIR}/../Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+          "${PROJ_DIR}/../Drivers/CMSIS/Include"
+        ],
+        "libList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "STM32F427xx"
+        ]
+      }
+    }
+  },
+  "version": "3.4"
+}

@@ -1,0 +1,13 @@
+robomaster\croutine_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+robomaster\croutine_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+robomaster\croutine_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster\croutine_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster\croutine_1.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster\croutine_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+robomaster\croutine_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+robomaster\croutine_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+robomaster\croutine_1.o: ../../../../rtos/tp-thread/inc/portmacro.h
+robomaster\croutine_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+robomaster\croutine_1.o: ../../../../rtos/tp-thread/inc/task.h
+robomaster\croutine_1.o: ../../../../rtos/tp-thread/inc/list.h
+robomaster\croutine_1.o: ../../../../rtos/tp-thread/inc/croutine.h

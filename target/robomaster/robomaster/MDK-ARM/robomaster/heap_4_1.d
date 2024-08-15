@@ -1,0 +1,13 @@
+robomaster\heap_4_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+robomaster\heap_4_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+robomaster\heap_4_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+robomaster\heap_4_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster\heap_4_1.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster\heap_4_1.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster\heap_4_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+robomaster\heap_4_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+robomaster\heap_4_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+robomaster\heap_4_1.o: ../../../../rtos/tp-thread/inc/portmacro.h
+robomaster\heap_4_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+robomaster\heap_4_1.o: ../../../../rtos/tp-thread/inc/task.h
+robomaster\heap_4_1.o: ../../../../rtos/tp-thread/inc/list.h

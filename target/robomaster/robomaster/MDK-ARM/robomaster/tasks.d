@@ -1,0 +1,16 @@
+robomaster\tasks.o: ..\..\..\..\rtos\tp-thread\src\tasks.c
+robomaster\tasks.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+robomaster\tasks.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\tasks.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster\tasks.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/projdefs.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/portable.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/portmacro.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/mpu_wrappers.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/task.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/list.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/timers.h
+robomaster\tasks.o: ../../../../rtos/tp-thread/inc/stack_macros.h

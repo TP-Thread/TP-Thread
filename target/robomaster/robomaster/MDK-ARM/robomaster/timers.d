@@ -1,0 +1,15 @@
+robomaster\timers.o: ..\..\..\..\rtos\tp-thread\src\timers.c
+robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/projdefs.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/portable.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/portmacro.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/mpu_wrappers.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/task.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/list.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/queue.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/timers.h

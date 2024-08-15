@@ -2764,7 +2764,7 @@ Image component sizes
        326         22          0          4       1720      65279   cmsis_os2.o
         44          4          0          0          0        790   dma.o
          0          0          0          0          0      19504   event_groups.o
-        64         20         42          4          0       1712   freertos.o
+        64         20         42          4          0       1716   freertos.o
        216         16          0          0          0       1059   gpio.o
        472         24          0         32      15360       4911   heap_4.o
        138          0          0          0          0       3586   list.o
@@ -2793,7 +2793,7 @@ Image component sizes
        376         52          0          0        240       2550   usart.o
 
     ----------------------------------------------------------------------
-     14410        942        536        148      20164    1059771   Object Totals
+     14410        942        536        148      20164    1059775   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         36          0          2          0          0          0   (incl. Padding)
 
@@ -2838,8 +2838,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     14732        958        536        148      20164    1046491   Grand Totals
-     14732        958        536        148      20164    1046491   ELF Image Totals
+     14732        958        536        148      20164    1046495   Grand Totals
+     14732        958        536        148      20164    1046495   ELF Image Totals
      14732        958        536        148          0          0   ROM Totals
 
 ==============================================================================

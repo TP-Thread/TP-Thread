@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>E:\TP-Thread\target\robomaster\robomaster-a\EWARM\robomaster-a\Exe\robomaster-a.out</Path>
+            <Output>
+                <Path>E:\TP-Thread\target\robomaster\robomaster-a\EWARM\robomaster-a\List\robomaster-a.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>
