@@ -1,0 +1,14 @@
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+zin\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+zin\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+zin\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+zin\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+zin\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h

@@ -6,13 +6,11 @@ TP-Thread is an embedded system designed to achieve the required functions in th
 
 ## 1. Architecture
 
-### * algorithms
+### * module
 
-### * boards
+### * rtos
 
-### * drivers
-
-### * threads
+### * target
 
 ## 2. Maintainer
 

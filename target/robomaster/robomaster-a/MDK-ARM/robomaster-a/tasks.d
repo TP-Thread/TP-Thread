@@ -1,0 +1,16 @@
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+robomaster-a\tasks.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+robomaster-a\tasks.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+robomaster-a\tasks.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster-a\tasks.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster-a\tasks.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+robomaster-a\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h

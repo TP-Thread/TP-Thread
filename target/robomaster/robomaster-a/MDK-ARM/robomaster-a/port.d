@@ -1,0 +1,12 @@
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+robomaster-a\port.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
+robomaster-a\port.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
+robomaster-a\port.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+robomaster-a\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
