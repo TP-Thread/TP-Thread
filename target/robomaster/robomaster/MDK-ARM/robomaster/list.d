@@ -4,6 +4,14 @@ robomaster\list.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\list.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\list.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\list.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\list.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\list.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\list.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\list.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\list.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\list.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\list.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\list.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\list.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\list.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\list.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h

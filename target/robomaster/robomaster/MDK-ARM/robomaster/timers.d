@@ -4,6 +4,14 @@ robomaster\timers.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\timers.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\timers.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\timers.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\timers.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\timers.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\timers.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\timers.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\timers.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\timers.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\timers.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\timers.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h

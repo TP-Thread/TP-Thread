@@ -1,4 +1,4 @@
-robomaster\task_index.o: ..\..\..\..\module\task\task_index.c
+robomaster\task_index.o: ..\..\..\..\rtos\task\task_index.c
 robomaster\task_index.o: ../Core/Inc/main.h
 robomaster\task_index.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 robomaster\task_index.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -38,6 +38,14 @@ robomaster\task_index.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.
 robomaster\task_index.o: ../../../../rtos/tp-thread/inc/cmsis_os.h
 robomaster\task_index.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\task_index.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\task_index.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\task_index.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\task_index.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\task_index.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\task_index.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\task_index.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\task_index.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\task_index.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\task_index.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\task_index.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\task_index.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h

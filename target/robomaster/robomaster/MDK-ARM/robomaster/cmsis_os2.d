@@ -7,6 +7,14 @@ robomaster\cmsis_os2.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 robomaster\cmsis_os2.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\cmsis_os2.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h

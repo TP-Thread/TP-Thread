@@ -38,6 +38,14 @@ robomaster\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 robomaster\main.o: ../../../../rtos/tp-thread/inc/cmsis_os.h
 robomaster\main.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\main.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\main.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\main.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\main.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\main.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\main.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\main.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\main.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\main.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\main.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\main.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\main.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h

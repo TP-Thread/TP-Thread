@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../../../../rtos/tp-thread/inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../../../../rtos/tp-thread/inc;../../../../rtos/systemview/inc;../../../../module/driver/inc;../../../../module/protocol/inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -696,6 +696,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Application/User/Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>drv_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\module\driver\src\drv_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\module\driver\src\drv_uart.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Application/User/Task</GroupName>
           <Files>
             <File>
@@ -706,7 +721,7 @@
             <File>
               <FileName>task_index.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\module\task\task_index.c</FilePath>
+              <FilePath>..\..\..\..\rtos\task\task_index.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -762,6 +777,31 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\rtos\tp-thread\src\port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/SystemView</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\rtos\systemview\src\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_SYSVIEW.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\rtos\systemview\src\SEGGER_SYSVIEW.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_SYSVIEW_Config_TP_Thread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\rtos\systemview\src\SEGGER_SYSVIEW_Config_TP_Thread.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_SYSVIEW_TP_Thread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\rtos\systemview\src\SEGGER_SYSVIEW_TP_Thread.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -4,6 +4,14 @@ robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
 robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\stream_buffer.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\stream_buffer.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\stream_buffer.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\stream_buffer.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\stream_buffer.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\stream_buffer.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\stream_buffer.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h

@@ -3,6 +3,14 @@ robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\tp_thread.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\tp_thread.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\tp_thread.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\tp_thread.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\tp_thread.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\tp_thread.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\tp_thread.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\tp_thread.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\tp_thread.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\tp_thread.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h
@@ -10,6 +18,9 @@ robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/portmacro.h
 robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/mpu_wrappers.h
 robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/task.h
 robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/list.h
+robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/cmsis_os.h
+robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/cmsis_os2.h
+robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\tp_thread.o: ../Core/Inc/main.h
 robomaster\tp_thread.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 robomaster\tp_thread.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -44,5 +55,7 @@ robomaster\tp_thread.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex
 robomaster\tp_thread.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 robomaster\tp_thread.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 robomaster\tp_thread.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/cmsis_os.h
-robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/cmsis_os2.h
+robomaster\tp_thread.o: ../../../../module/driver/inc/drv_key.h
+robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/tp_define.h
+robomaster\tp_thread.o: ../../../../module/driver/inc/drv_uart.h
+robomaster\tp_thread.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h

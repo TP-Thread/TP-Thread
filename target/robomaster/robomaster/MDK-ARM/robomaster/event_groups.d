@@ -4,6 +4,14 @@ robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\event_groups.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\event_groups.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\event_groups.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\event_groups.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\event_groups.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\event_groups.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\event_groups.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\event_groups.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\event_groups.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\event_groups.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h

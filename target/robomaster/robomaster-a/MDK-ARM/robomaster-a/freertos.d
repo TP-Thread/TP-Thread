@@ -3,6 +3,14 @@ robomaster-a\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/Free
 robomaster-a\freertos.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster-a\freertos.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster-a\freertos.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster-a\freertos.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_FreeRTOS.h
+robomaster-a\freertos.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW.h
+robomaster-a\freertos.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER.h
+robomaster-a\freertos.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster-a\freertos.o: ../Middlewares/Third_Party/SystemView/Inc/Global.h
+robomaster-a\freertos.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster-a\freertos.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_Conf.h
+robomaster-a\freertos.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_RTT_Conf.h
 robomaster-a\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 robomaster-a\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
 robomaster-a\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
@@ -46,3 +54,8 @@ robomaster-a\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_e
 robomaster-a\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 robomaster-a\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 robomaster-a\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+robomaster-a\freertos.o: ../Core/Inc/tp_define.h
+robomaster-a\freertos.o: ../../../../module/driver/inc/drv_key.h
+robomaster-a\freertos.o: ../Core/Inc/tp_define.h
+robomaster-a\freertos.o: ../../../../module/driver/inc/drv_uart.h
+robomaster-a\freertos.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h

@@ -5,6 +5,14 @@ robomaster\queue.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\queue.o: ../../../../rtos/tp-thread/inc/tp_config.h
+robomaster\queue.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
+robomaster\queue.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+robomaster\queue.o: ../../../../rtos/systemview/inc/SEGGER.h
+robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster\queue.o: ../../../../rtos/systemview/inc/Global.h
+robomaster\queue.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster\queue.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+robomaster\queue.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
 robomaster\queue.o: ../../../../rtos/tp-thread/inc/projdefs.h
 robomaster\queue.o: ../../../../rtos/tp-thread/inc/portable.h
 robomaster\queue.o: ../../../../rtos/tp-thread/inc/deprecated_definitions.h

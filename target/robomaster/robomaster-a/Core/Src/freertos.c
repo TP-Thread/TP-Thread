@@ -25,6 +25,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "tp_define.h"
+#include "SEGGER_SYSVIEW.h"
 
 /* USER CODE END Includes */
 
@@ -47,6 +49,13 @@
 /* USER CODE BEGIN Variables */
 
 /* USER CODE END Variables */
+/* Definitions for Led */
+osThreadId_t LedHandle;
+const osThreadAttr_t Led_attributes = {
+  .name = "Led",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
 /* Definitions for Index */
 osThreadId_t IndexHandle;
 const osThreadAttr_t Index_attributes = {
@@ -60,7 +69,8 @@ const osThreadAttr_t Index_attributes = {
 
 /* USER CODE END FunctionPrototypes */
 
-void Index_Entry(void *argument);
+void Led_Entry(void *argument);
+extern void Index_Entry(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -71,6 +81,7 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
+  SEGGER_SYSVIEW_Conf();
 
   /* USER CODE END Init */
 
@@ -91,6 +102,9 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
+  /* creation of Led */
+  LedHandle = osThreadNew(Led_Entry, NULL, &Led_attributes);
+
   /* creation of Index */
   IndexHandle = osThreadNew(Index_Entry, NULL, &Index_attributes);
 
@@ -104,23 +118,23 @@ void MX_FREERTOS_Init(void) {
 
 }
 
-/* USER CODE BEGIN Header_Index_Entry */
+/* USER CODE BEGIN Header_Led_Entry */
 /**
-  * @brief  Function implementing the Index thread.
+  * @brief  Function implementing the Led thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_Index_Entry */
-void Index_Entry(void *argument)
+/* USER CODE END Header_Led_Entry */
+void Led_Entry(void *argument)
 {
-  /* USER CODE BEGIN Index_Entry */
+  /* USER CODE BEGIN Led_Entry */
   /* Infinite loop */
   for(;;)
   {
 	LED_R_Toggle();
     osDelay(1000);
   }
-  /* USER CODE END Index_Entry */
+  /* USER CODE END Led_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

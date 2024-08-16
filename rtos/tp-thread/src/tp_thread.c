@@ -1,43 +1,33 @@
-/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * File Name          : freertos.c
-  * Description        : Code for freertos applications
+  * @file    tp_thread.c
+  * @author  TP-Thread
+  * @brief   TP-Thread initialization.
   ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
+  */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "tp_thread.h"
 #include "task.h"
-#include "main.h"
 #include "cmsis_os.h"
+
+/* Private includes ----------------------------------------------------------*/
+#include "tp_define.h"
+#include "SEGGER_SYSVIEW.h"
 
 /* Private variables ---------------------------------------------------------*/
 /* Definitions for Index */
 osThreadId_t IndexHandle;
 const osThreadAttr_t Index_attributes = {
-  .name = "INDEX",
+  .name = "Index",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 
 /* Private function prototypes -----------------------------------------------*/
-/* USER CODE BEGIN FunctionPrototypes */
 extern void Index_Entry(void *argument);
 
-/* USER CODE END FunctionPrototypes */
-
+/* Private functions ---------------------------------------------------------*/
 /**
   * @brief  TP-Thread initialization
   * @param  None
@@ -46,6 +36,7 @@ extern void Index_Entry(void *argument);
 void TP_Thread_Init(void)
 {
   /* USER CODE BEGIN Init */
+  SEGGER_SYSVIEW_Conf();
 
   /* USER CODE END Init */
 

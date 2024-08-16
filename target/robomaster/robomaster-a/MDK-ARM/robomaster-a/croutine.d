@@ -3,6 +3,14 @@ robomaster-a\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/Free
 robomaster-a\croutine.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster-a\croutine.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster-a\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster-a\croutine.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_FreeRTOS.h
+robomaster-a\croutine.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW.h
+robomaster-a\croutine.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER.h
+robomaster-a\croutine.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster-a\croutine.o: ../Middlewares/Third_Party/SystemView/Inc/Global.h
+robomaster-a\croutine.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster-a\croutine.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_Conf.h
+robomaster-a\croutine.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_RTT_Conf.h
 robomaster-a\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 robomaster-a\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
 robomaster-a\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h

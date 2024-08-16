@@ -7,6 +7,14 @@ robomaster-a\cmsis_os2.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 robomaster-a\cmsis_os2.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 robomaster-a\cmsis_os2.o: ../Core/Inc/FreeRTOSConfig.h
+robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_FreeRTOS.h
+robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW.h
+robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER.h
+robomaster-a\cmsis_os2.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/SystemView/Inc/Global.h
+robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_Conf.h
+robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_RTT_Conf.h
 robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
 robomaster-a\cmsis_os2.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
