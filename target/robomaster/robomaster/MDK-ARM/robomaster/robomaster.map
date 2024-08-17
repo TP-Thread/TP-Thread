@@ -2695,40 +2695,40 @@ Image Symbol Table
     i.vTaskPlaceOnEventList                  0x08003d1c   Section        0  tasks.o(i.vTaskPlaceOnEventList)
     i.vTaskPlaceOnEventListRestricted        0x08003d4c   Section        0  tasks.o(i.vTaskPlaceOnEventListRestricted)
     i.vTaskStartScheduler                    0x08003d8c   Section        0  tasks.o(i.vTaskStartScheduler)
-    i.vTaskSuspendAll                        0x08003e34   Section        0  tasks.o(i.vTaskSuspendAll)
-    i.vTaskSwitchContext                     0x08003e44   Section        0  tasks.o(i.vTaskSwitchContext)
-    i.xPortStartScheduler                    0x08003ecc   Section        0  port.o(i.xPortStartScheduler)
-    i.xPortSysTickHandler                    0x08003fc0   Section        0  port.o(i.xPortSysTickHandler)
-    i.xQueueGenericCreateStatic              0x08003fec   Section        0  queue.o(i.xQueueGenericCreateStatic)
-    i.xQueueGenericReset                     0x08004054   Section        0  queue.o(i.xQueueGenericReset)
-    i.xQueueGenericSend                      0x080040dc   Section        0  queue.o(i.xQueueGenericSend)
-    i.xQueueGenericSendFromISR               0x08004264   Section        0  queue.o(i.xQueueGenericSendFromISR)
-    i.xQueueReceive                          0x08004344   Section        0  queue.o(i.xQueueReceive)
-    i.xTaskCheckForTimeOut                   0x080044b8   Section        0  tasks.o(i.xTaskCheckForTimeOut)
-    i.xTaskCreate                            0x0800452c   Section        0  tasks.o(i.xTaskCreate)
-    i.xTaskCreateStatic                      0x08004586   Section        0  tasks.o(i.xTaskCreateStatic)
-    i.xTaskGetSchedulerState                 0x080045dc   Section        0  tasks.o(i.xTaskGetSchedulerState)
-    i.xTaskGetTickCount                      0x080045f8   Section        0  tasks.o(i.xTaskGetTickCount)
-    i.xTaskGetTickCountFromISR               0x08004604   Section        0  tasks.o(i.xTaskGetTickCountFromISR)
-    i.xTaskIncrementTick                     0x08004614   Section        0  tasks.o(i.xTaskIncrementTick)
-    i.xTaskPriorityDisinherit                0x080046e4   Section        0  tasks.o(i.xTaskPriorityDisinherit)
-    i.xTaskRemoveFromEventList               0x08004770   Section        0  tasks.o(i.xTaskRemoveFromEventList)
-    i.xTaskResumeAll                         0x080047e4   Section        0  tasks.o(i.xTaskResumeAll)
-    i.xTimerCreateTimerTask                  0x080048ac   Section        0  timers.o(i.xTimerCreateTimerTask)
-    i.xTimerGenericCommand                   0x0800490c   Section        0  timers.o(i.xTimerGenericCommand)
-    .constdata                               0x08004974   Section       36  tp_thread.o(.constdata)
-    .constdata                               0x08004998   Section       17  segger_rtt.o(.constdata)
-    _aInitStr                                0x08004998   Data          17  segger_rtt.o(.constdata)
-    .constdata                               0x080049a9   Section       26  segger_sysview.o(.constdata)
-    _abSync                                  0x080049a9   Data          10  segger_sysview.o(.constdata)
-    _aV2C                                    0x080049b3   Data          16  segger_sysview.o(.constdata)
-    .constdata                               0x080049c4   Section        8  segger_sysview_tp_thread.o(.constdata)
-    .constdata                               0x080049cc   Section        8  stm32f4xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x080049cc   Data           8  stm32f4xx_hal_dma.o(.constdata)
-    .constdata                               0x080049d4   Section       16  system_stm32f4xx.o(.constdata)
-    .constdata                               0x080049e4   Section        8  system_stm32f4xx.o(.constdata)
-    .conststring                             0x080049ec   Section        6  tp_thread.o(.conststring)
-    .conststring                             0x080049f4   Section       80  segger_sysview_tp_thread.o(.conststring)
+    i.vTaskSuspendAll                        0x08003e2c   Section        0  tasks.o(i.vTaskSuspendAll)
+    i.vTaskSwitchContext                     0x08003e3c   Section        0  tasks.o(i.vTaskSwitchContext)
+    i.xPortStartScheduler                    0x08003ec4   Section        0  port.o(i.xPortStartScheduler)
+    i.xPortSysTickHandler                    0x08003fb8   Section        0  port.o(i.xPortSysTickHandler)
+    i.xQueueGenericCreateStatic              0x08003fe4   Section        0  queue.o(i.xQueueGenericCreateStatic)
+    i.xQueueGenericReset                     0x0800404c   Section        0  queue.o(i.xQueueGenericReset)
+    i.xQueueGenericSend                      0x080040d4   Section        0  queue.o(i.xQueueGenericSend)
+    i.xQueueGenericSendFromISR               0x0800425c   Section        0  queue.o(i.xQueueGenericSendFromISR)
+    i.xQueueReceive                          0x0800433c   Section        0  queue.o(i.xQueueReceive)
+    i.xTaskCheckForTimeOut                   0x080044b0   Section        0  tasks.o(i.xTaskCheckForTimeOut)
+    i.xTaskCreate                            0x08004524   Section        0  tasks.o(i.xTaskCreate)
+    i.xTaskCreateStatic                      0x0800457e   Section        0  tasks.o(i.xTaskCreateStatic)
+    i.xTaskGetSchedulerState                 0x080045d4   Section        0  tasks.o(i.xTaskGetSchedulerState)
+    i.xTaskGetTickCount                      0x080045f0   Section        0  tasks.o(i.xTaskGetTickCount)
+    i.xTaskGetTickCountFromISR               0x080045fc   Section        0  tasks.o(i.xTaskGetTickCountFromISR)
+    i.xTaskIncrementTick                     0x0800460c   Section        0  tasks.o(i.xTaskIncrementTick)
+    i.xTaskPriorityDisinherit                0x080046dc   Section        0  tasks.o(i.xTaskPriorityDisinherit)
+    i.xTaskRemoveFromEventList               0x08004768   Section        0  tasks.o(i.xTaskRemoveFromEventList)
+    i.xTaskResumeAll                         0x080047dc   Section        0  tasks.o(i.xTaskResumeAll)
+    i.xTimerCreateTimerTask                  0x080048a4   Section        0  timers.o(i.xTimerCreateTimerTask)
+    i.xTimerGenericCommand                   0x08004904   Section        0  timers.o(i.xTimerGenericCommand)
+    .constdata                               0x0800496c   Section       36  tp_thread.o(.constdata)
+    .constdata                               0x08004990   Section       17  segger_rtt.o(.constdata)
+    _aInitStr                                0x08004990   Data          17  segger_rtt.o(.constdata)
+    .constdata                               0x080049a1   Section       26  segger_sysview.o(.constdata)
+    _abSync                                  0x080049a1   Data          10  segger_sysview.o(.constdata)
+    _aV2C                                    0x080049ab   Data          16  segger_sysview.o(.constdata)
+    .constdata                               0x080049bc   Section        8  segger_sysview_tp_thread.o(.constdata)
+    .constdata                               0x080049c4   Section        8  stm32f4xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x080049c4   Data           8  stm32f4xx_hal_dma.o(.constdata)
+    .constdata                               0x080049cc   Section       16  system_stm32f4xx.o(.constdata)
+    .constdata                               0x080049dc   Section        8  system_stm32f4xx.o(.constdata)
+    .conststring                             0x080049e4   Section        6  tp_thread.o(.conststring)
+    .conststring                             0x080049ec   Section       80  segger_sysview_tp_thread.o(.conststring)
     .data                                    0x20000000   Section        4  tp_thread.o(.data)
     .data                                    0x20000004   Section        4  cmsis_os2.o(.data)
     KernelState                              0x20000004   Data           4  cmsis_os2.o(.data)
@@ -3071,33 +3071,33 @@ Image Symbol Table
     vTaskPlaceOnEventList                    0x08003d1d   Thumb Code    44  tasks.o(i.vTaskPlaceOnEventList)
     vTaskPlaceOnEventListRestricted          0x08003d4d   Thumb Code    58  tasks.o(i.vTaskPlaceOnEventListRestricted)
     vTaskStartScheduler                      0x08003d8d   Thumb Code   144  tasks.o(i.vTaskStartScheduler)
-    vTaskSuspendAll                          0x08003e35   Thumb Code    10  tasks.o(i.vTaskSuspendAll)
-    vTaskSwitchContext                       0x08003e45   Thumb Code   120  tasks.o(i.vTaskSwitchContext)
-    xPortStartScheduler                      0x08003ecd   Thumb Code   222  port.o(i.xPortStartScheduler)
-    xPortSysTickHandler                      0x08003fc1   Thumb Code    38  port.o(i.xPortSysTickHandler)
-    xQueueGenericCreateStatic                0x08003fed   Thumb Code   102  queue.o(i.xQueueGenericCreateStatic)
-    xQueueGenericReset                       0x08004055   Thumb Code   132  queue.o(i.xQueueGenericReset)
-    xQueueGenericSend                        0x080040dd   Thumb Code   386  queue.o(i.xQueueGenericSend)
-    xQueueGenericSendFromISR                 0x08004265   Thumb Code   222  queue.o(i.xQueueGenericSendFromISR)
-    xQueueReceive                            0x08004345   Thumb Code   366  queue.o(i.xQueueReceive)
-    xTaskCheckForTimeOut                     0x080044b9   Thumb Code   112  tasks.o(i.xTaskCheckForTimeOut)
-    xTaskCreate                              0x0800452d   Thumb Code    90  tasks.o(i.xTaskCreate)
-    xTaskCreateStatic                        0x08004587   Thumb Code    86  tasks.o(i.xTaskCreateStatic)
-    xTaskGetSchedulerState                   0x080045dd   Thumb Code    22  tasks.o(i.xTaskGetSchedulerState)
-    xTaskGetTickCount                        0x080045f9   Thumb Code     6  tasks.o(i.xTaskGetTickCount)
-    xTaskGetTickCountFromISR                 0x08004605   Thumb Code    12  tasks.o(i.xTaskGetTickCountFromISR)
-    xTaskIncrementTick                       0x08004615   Thumb Code   198  tasks.o(i.xTaskIncrementTick)
-    xTaskPriorityDisinherit                  0x080046e5   Thumb Code   132  tasks.o(i.xTaskPriorityDisinherit)
-    xTaskRemoveFromEventList                 0x08004771   Thumb Code   104  tasks.o(i.xTaskRemoveFromEventList)
-    xTaskResumeAll                           0x080047e5   Thumb Code   186  tasks.o(i.xTaskResumeAll)
-    xTimerCreateTimerTask                    0x080048ad   Thumb Code    78  timers.o(i.xTimerCreateTimerTask)
-    xTimerGenericCommand                     0x0800490d   Thumb Code    98  timers.o(i.xTimerGenericCommand)
-    Index_attributes                         0x08004974   Data          36  tp_thread.o(.constdata)
-    SYSVIEW_X_OS_TraceAPI                    0x080049c4   Data           8  segger_sysview_tp_thread.o(.constdata)
-    AHBPrescTable                            0x080049d4   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x080049e4   Data           8  system_stm32f4xx.o(.constdata)
-    Region$$Table$$Base                      0x08004a44   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08004a64   Number         0  anon$$obj.o(Region$$Table)
+    vTaskSuspendAll                          0x08003e2d   Thumb Code    10  tasks.o(i.vTaskSuspendAll)
+    vTaskSwitchContext                       0x08003e3d   Thumb Code   120  tasks.o(i.vTaskSwitchContext)
+    xPortStartScheduler                      0x08003ec5   Thumb Code   222  port.o(i.xPortStartScheduler)
+    xPortSysTickHandler                      0x08003fb9   Thumb Code    38  port.o(i.xPortSysTickHandler)
+    xQueueGenericCreateStatic                0x08003fe5   Thumb Code   102  queue.o(i.xQueueGenericCreateStatic)
+    xQueueGenericReset                       0x0800404d   Thumb Code   132  queue.o(i.xQueueGenericReset)
+    xQueueGenericSend                        0x080040d5   Thumb Code   386  queue.o(i.xQueueGenericSend)
+    xQueueGenericSendFromISR                 0x0800425d   Thumb Code   222  queue.o(i.xQueueGenericSendFromISR)
+    xQueueReceive                            0x0800433d   Thumb Code   366  queue.o(i.xQueueReceive)
+    xTaskCheckForTimeOut                     0x080044b1   Thumb Code   112  tasks.o(i.xTaskCheckForTimeOut)
+    xTaskCreate                              0x08004525   Thumb Code    90  tasks.o(i.xTaskCreate)
+    xTaskCreateStatic                        0x0800457f   Thumb Code    86  tasks.o(i.xTaskCreateStatic)
+    xTaskGetSchedulerState                   0x080045d5   Thumb Code    22  tasks.o(i.xTaskGetSchedulerState)
+    xTaskGetTickCount                        0x080045f1   Thumb Code     6  tasks.o(i.xTaskGetTickCount)
+    xTaskGetTickCountFromISR                 0x080045fd   Thumb Code    12  tasks.o(i.xTaskGetTickCountFromISR)
+    xTaskIncrementTick                       0x0800460d   Thumb Code   198  tasks.o(i.xTaskIncrementTick)
+    xTaskPriorityDisinherit                  0x080046dd   Thumb Code   132  tasks.o(i.xTaskPriorityDisinherit)
+    xTaskRemoveFromEventList                 0x08004769   Thumb Code   104  tasks.o(i.xTaskRemoveFromEventList)
+    xTaskResumeAll                           0x080047dd   Thumb Code   186  tasks.o(i.xTaskResumeAll)
+    xTimerCreateTimerTask                    0x080048a5   Thumb Code    78  timers.o(i.xTimerCreateTimerTask)
+    xTimerGenericCommand                     0x08004905   Thumb Code    98  timers.o(i.xTimerGenericCommand)
+    Index_attributes                         0x0800496c   Data          36  tp_thread.o(.constdata)
+    SYSVIEW_X_OS_TraceAPI                    0x080049bc   Data           8  segger_sysview_tp_thread.o(.constdata)
+    AHBPrescTable                            0x080049cc   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x080049dc   Data           8  system_stm32f4xx.o(.constdata)
+    Region$$Table$$Base                      0x08004a3c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08004a5c   Number         0  anon$$obj.o(Region$$Table)
     IndexHandle                              0x20000000   Data           4  tp_thread.o(.data)
     pxCurrentTCB                             0x20000008   Data           4  tasks.o(.data)
     uwTickFreq                               0x20000098   Data           1  stm32f4xx_hal.o(.data)
@@ -3123,9 +3123,9 @@ Memory Map of the image
 
   Image Entry point : 0x080001ad
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004b0c, Max: 0x00200000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004b04, Max: 0x00200000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00004a64, Max: 0x00200000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00004a5c, Max: 0x00200000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3332,63 +3332,63 @@ Memory Map of the image
     0x08003d10   0x08003d10   0x0000000c   Code   RO         1268    i.vTaskMissedYield  tasks.o
     0x08003d1c   0x08003d1c   0x00000030   Code   RO         1270    i.vTaskPlaceOnEventList  tasks.o
     0x08003d4c   0x08003d4c   0x00000040   Code   RO         1271    i.vTaskPlaceOnEventListRestricted  tasks.o
-    0x08003d8c   0x08003d8c   0x000000a8   Code   RO         1279    i.vTaskStartScheduler  tasks.o
-    0x08003e34   0x08003e34   0x00000010   Code   RO         1281    i.vTaskSuspendAll   tasks.o
-    0x08003e44   0x08003e44   0x00000088   Code   RO         1282    i.vTaskSwitchContext  tasks.o
-    0x08003ecc   0x08003ecc   0x000000f4   Code   RO         2396    i.xPortStartScheduler  port.o
-    0x08003fc0   0x08003fc0   0x0000002c   Code   RO         2397    i.xPortSysTickHandler  port.o
-    0x08003fec   0x08003fec   0x00000066   Code   RO         1816    i.xQueueGenericCreateStatic  queue.o
-    0x08004052   0x08004052   0x00000002   PAD
-    0x08004054   0x08004054   0x00000088   Code   RO         1817    i.xQueueGenericReset  queue.o
-    0x080040dc   0x080040dc   0x00000188   Code   RO         1818    i.xQueueGenericSend  queue.o
-    0x08004264   0x08004264   0x000000de   Code   RO         1819    i.xQueueGenericSendFromISR  queue.o
-    0x08004342   0x08004342   0x00000002   PAD
-    0x08004344   0x08004344   0x00000174   Code   RO         1828    i.xQueueReceive     queue.o
-    0x080044b8   0x080044b8   0x00000074   Code   RO         1284    i.xTaskCheckForTimeOut  tasks.o
-    0x0800452c   0x0800452c   0x0000005a   Code   RO         1285    i.xTaskCreate       tasks.o
-    0x08004586   0x08004586   0x00000056   Code   RO         1286    i.xTaskCreateStatic  tasks.o
-    0x080045dc   0x080045dc   0x0000001c   Code   RO         1290    i.xTaskGetSchedulerState  tasks.o
-    0x080045f8   0x080045f8   0x0000000c   Code   RO         1291    i.xTaskGetTickCount  tasks.o
-    0x08004604   0x08004604   0x00000010   Code   RO         1292    i.xTaskGetTickCountFromISR  tasks.o
-    0x08004614   0x08004614   0x000000d0   Code   RO         1293    i.xTaskIncrementTick  tasks.o
-    0x080046e4   0x080046e4   0x0000008c   Code   RO         1296    i.xTaskPriorityDisinherit  tasks.o
-    0x08004770   0x08004770   0x00000074   Code   RO         1298    i.xTaskRemoveFromEventList  tasks.o
-    0x080047e4   0x080047e4   0x000000c8   Code   RO         1299    i.xTaskResumeAll    tasks.o
-    0x080048ac   0x080048ac   0x00000060   Code   RO         1645    i.xTimerCreateTimerTask  timers.o
-    0x0800490c   0x0800490c   0x00000068   Code   RO         1646    i.xTimerGenericCommand  timers.o
-    0x08004974   0x08004974   0x00000024   Data   RO          640    .constdata          tp_thread.o
-    0x08004998   0x08004998   0x00000011   Data   RO         2503    .constdata          segger_rtt.o
-    0x080049a9   0x080049a9   0x0000001a   Data   RO         2783    .constdata          segger_sysview.o
-    0x080049c3   0x080049c3   0x00000001   PAD
-    0x080049c4   0x080049c4   0x00000008   Data   RO         3257    .constdata          segger_sysview_tp_thread.o
-    0x080049cc   0x080049cc   0x00000008   Data   RO         4106    .constdata          stm32f4xx_hal_dma.o
-    0x080049d4   0x080049d4   0x00000010   Data   RO         6372    .constdata          system_stm32f4xx.o
-    0x080049e4   0x080049e4   0x00000008   Data   RO         6373    .constdata          system_stm32f4xx.o
-    0x080049ec   0x080049ec   0x00000006   Data   RO          641    .conststring        tp_thread.o
-    0x080049f2   0x080049f2   0x00000002   PAD
-    0x080049f4   0x080049f4   0x00000050   Data   RO         3258    .conststring        segger_sysview_tp_thread.o
-    0x08004a44   0x08004a44   0x00000020   Data   RO         6444    Region$$Table       anon$$obj.o
+    0x08003d8c   0x08003d8c   0x000000a0   Code   RO         1279    i.vTaskStartScheduler  tasks.o
+    0x08003e2c   0x08003e2c   0x00000010   Code   RO         1281    i.vTaskSuspendAll   tasks.o
+    0x08003e3c   0x08003e3c   0x00000088   Code   RO         1282    i.vTaskSwitchContext  tasks.o
+    0x08003ec4   0x08003ec4   0x000000f4   Code   RO         2396    i.xPortStartScheduler  port.o
+    0x08003fb8   0x08003fb8   0x0000002c   Code   RO         2397    i.xPortSysTickHandler  port.o
+    0x08003fe4   0x08003fe4   0x00000066   Code   RO         1816    i.xQueueGenericCreateStatic  queue.o
+    0x0800404a   0x0800404a   0x00000002   PAD
+    0x0800404c   0x0800404c   0x00000088   Code   RO         1817    i.xQueueGenericReset  queue.o
+    0x080040d4   0x080040d4   0x00000188   Code   RO         1818    i.xQueueGenericSend  queue.o
+    0x0800425c   0x0800425c   0x000000de   Code   RO         1819    i.xQueueGenericSendFromISR  queue.o
+    0x0800433a   0x0800433a   0x00000002   PAD
+    0x0800433c   0x0800433c   0x00000174   Code   RO         1828    i.xQueueReceive     queue.o
+    0x080044b0   0x080044b0   0x00000074   Code   RO         1284    i.xTaskCheckForTimeOut  tasks.o
+    0x08004524   0x08004524   0x0000005a   Code   RO         1285    i.xTaskCreate       tasks.o
+    0x0800457e   0x0800457e   0x00000056   Code   RO         1286    i.xTaskCreateStatic  tasks.o
+    0x080045d4   0x080045d4   0x0000001c   Code   RO         1290    i.xTaskGetSchedulerState  tasks.o
+    0x080045f0   0x080045f0   0x0000000c   Code   RO         1291    i.xTaskGetTickCount  tasks.o
+    0x080045fc   0x080045fc   0x00000010   Code   RO         1292    i.xTaskGetTickCountFromISR  tasks.o
+    0x0800460c   0x0800460c   0x000000d0   Code   RO         1293    i.xTaskIncrementTick  tasks.o
+    0x080046dc   0x080046dc   0x0000008c   Code   RO         1296    i.xTaskPriorityDisinherit  tasks.o
+    0x08004768   0x08004768   0x00000074   Code   RO         1298    i.xTaskRemoveFromEventList  tasks.o
+    0x080047dc   0x080047dc   0x000000c8   Code   RO         1299    i.xTaskResumeAll    tasks.o
+    0x080048a4   0x080048a4   0x00000060   Code   RO         1645    i.xTimerCreateTimerTask  timers.o
+    0x08004904   0x08004904   0x00000068   Code   RO         1646    i.xTimerGenericCommand  timers.o
+    0x0800496c   0x0800496c   0x00000024   Data   RO          640    .constdata          tp_thread.o
+    0x08004990   0x08004990   0x00000011   Data   RO         2503    .constdata          segger_rtt.o
+    0x080049a1   0x080049a1   0x0000001a   Data   RO         2783    .constdata          segger_sysview.o
+    0x080049bb   0x080049bb   0x00000001   PAD
+    0x080049bc   0x080049bc   0x00000008   Data   RO         3257    .constdata          segger_sysview_tp_thread.o
+    0x080049c4   0x080049c4   0x00000008   Data   RO         4106    .constdata          stm32f4xx_hal_dma.o
+    0x080049cc   0x080049cc   0x00000010   Data   RO         6372    .constdata          system_stm32f4xx.o
+    0x080049dc   0x080049dc   0x00000008   Data   RO         6373    .constdata          system_stm32f4xx.o
+    0x080049e4   0x080049e4   0x00000006   Data   RO          641    .conststring        tp_thread.o
+    0x080049ea   0x080049ea   0x00000002   PAD
+    0x080049ec   0x080049ec   0x00000050   Data   RO         3258    .conststring        segger_sysview_tp_thread.o
+    0x08004a3c   0x08004a3c   0x00000020   Data   RO         6444    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x08004b0c, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x08004b04, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08004a64, Size: 0x000059d0, Max: 0x00030000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08004a5c, Size: 0x000059d0, Max: 0x00030000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08004a64   0x00000004   Data   RW          642    .data               tp_thread.o
-    0x20000004   0x08004a68   0x00000004   Data   RW          792    .data               cmsis_os2.o
-    0x20000008   0x08004a6c   0x0000003c   Data   RW         1302    .data               tasks.o
-    0x20000044   0x08004aa8   0x00000014   Data   RW         1654    .data               timers.o
-    0x20000058   0x08004abc   0x00000020   Data   RW         2342    .data               heap_4.o
-    0x20000078   0x08004adc   0x0000000c   Data   RW         2398    .data               port.o
-    0x20000084   0x08004ae8   0x00000010   Data   RW         2786    .data               segger_sysview.o
-    0x20000094   0x08004af8   0x00000004   Data   RW         3259    .data               segger_sysview_tp_thread.o
-    0x20000098   0x08004afc   0x0000000c   Data   RW         4559    .data               stm32f4xx_hal.o
-    0x200000a4   0x08004b08   0x00000004   Data   RW         6374    .data               system_stm32f4xx.o
+    0x20000000   0x08004a5c   0x00000004   Data   RW          642    .data               tp_thread.o
+    0x20000004   0x08004a60   0x00000004   Data   RW          792    .data               cmsis_os2.o
+    0x20000008   0x08004a64   0x0000003c   Data   RW         1302    .data               tasks.o
+    0x20000044   0x08004aa0   0x00000014   Data   RW         1654    .data               timers.o
+    0x20000058   0x08004ab4   0x00000020   Data   RW         2342    .data               heap_4.o
+    0x20000078   0x08004ad4   0x0000000c   Data   RW         2398    .data               port.o
+    0x20000084   0x08004ae0   0x00000010   Data   RW         2786    .data               segger_sysview.o
+    0x20000094   0x08004af0   0x00000004   Data   RW         3259    .data               segger_sysview_tp_thread.o
+    0x20000098   0x08004af4   0x0000000c   Data   RW         4559    .data               stm32f4xx_hal.o
+    0x200000a4   0x08004b00   0x00000004   Data   RW         6374    .data               system_stm32f4xx.o
     0x200000a8        -       0x00000090   Zero   RW          268    .bss                adc.o
     0x20000138        -       0x00000028   Zero   RW          315    .bss                can.o
     0x20000160        -       0x000000f0   Zero   RW          382    .bss                usart.o
@@ -3400,7 +3400,7 @@ Memory Map of the image
     0x20000f6c        -       0x00003c00   Zero   RW         2341    .bss                heap_4.o
     0x20004b6c        -       0x000004b8   Zero   RW         2502    .bss                segger_rtt.o
     0x20005024        -       0x0000050b   Zero   RW         2782    .bss                segger_sysview.o
-    0x2000552f   0x08004b0c   0x00000001   PAD
+    0x2000552f   0x08004b04   0x00000001   PAD
     0x20005530        -       0x000000a0   Zero   RW         3256    .bss                segger_sysview_tp_thread.o
     0x200055d0        -       0x00000400   Zero   RW            1    STACK               startup_stm32f427xx.o
 
@@ -3443,13 +3443,13 @@ Image component sizes
         48         18          0          0          0       4253   stm32f4xx_it.o
         16          4         24          4          0       1139   system_stm32f4xx.o
         32          6          0          0          0        518   task_index.o
-      2280        188          0         60       1220      42153   tasks.o
+      2272        180          0         60       1220      42057   tasks.o
        972         80          0         20        280      27263   timers.o
         36         14         42          4          0       4952   tp_thread.o
        372         50          0          0        240       2554   usart.o
 
     ----------------------------------------------------------------------
-     18026       1294        668        168      22824    1101050   Object Totals
+     18018       1286        668        168      22824    1100954   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         36          0          3          0          1          0   (incl. Padding)
 
@@ -3495,15 +3495,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     18376       1310        668        168      22824    1083698   Grand Totals
-     18376       1310        668        168      22824    1083698   ELF Image Totals
-     18376       1310        668        168          0          0   ROM Totals
+     18368       1302        668        168      22824    1083602   Grand Totals
+     18368       1302        668        168      22824    1083602   ELF Image Totals
+     18368       1302        668        168          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                19044 (  18.60kB)
+    Total RO  Size (Code + RO Data)                19036 (  18.59kB)
     Total RW  Size (RW Data + ZI Data)             22992 (  22.45kB)
-    Total ROM Size (Code + RO Data + RW Data)      19212 (  18.76kB)
+    Total ROM Size (Code + RO Data + RW Data)      19204 (  18.75kB)
 
 ==============================================================================
 

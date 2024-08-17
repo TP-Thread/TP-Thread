@@ -288,7 +288,7 @@ Notes:
                                                     }
 #else
   #define traceTASK_SWITCHED_IN()                   {                                                                   \
-                                                      if (memcmp(pxCurrentTCB->pcTaskName, "IDLE", 5) != 0) {           \
+                                                      if (memcmp(pxCurrentTCB->pcTaskName, "Idle", 5) != 0) {           \
                                                         SEGGER_SYSVIEW_OnTaskStartExec((U32)pxCurrentTCB);              \
                                                       } else {                                                          \
                                                         SEGGER_SYSVIEW_OnIdle();                                        \

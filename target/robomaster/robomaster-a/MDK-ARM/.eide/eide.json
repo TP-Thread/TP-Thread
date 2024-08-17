@@ -59,6 +59,27 @@
                   }
                 ],
                 "folders": []
+              },
+              {
+                "name": "Driver",
+                "files": [
+                  {
+                    "path": "../../../../module/driver/src/drv_key.c"
+                  },
+                  {
+                    "path": "../../../../module/driver/src/drv_uart.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "Task",
+                "files": [
+                  {
+                    "path": "../../../../rtos/task/task_index.c"
+                  }
+                ],
+                "folders": []
               }
             ]
           }
@@ -360,7 +381,7 @@
           "../Drivers/CMSIS/Device/ST/STM32F4xx/Include",
           "../Drivers/CMSIS/Include",
           "../Middlewares/Third_Party/SystemView/Inc",
-          ".cmsis/include",
+          "../../../../module/driver/inc",
           "RTE/_robomaster-a"
         ],
         "libList": [],

@@ -58,6 +58,18 @@
                 "folders": []
               },
               {
+                "name": "Driver",
+                "files": [
+                  {
+                    "path": "../../../../module/driver/src/drv_key.c"
+                  },
+                  {
+                    "path": "../../../../module/driver/src/drv_uart.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
                 "name": "Task",
                 "files": [
                   {
@@ -367,7 +379,8 @@
           "../Drivers/CMSIS/Include",
           "../../../../rtos/tp-thread/inc",
           "../../../../rtos/systemview/inc",
-          ".cmsis/include",
+          "../../../../module/driver/inc",
+          "../../../../module/protocol/inc",
           "RTE/_robomaster"
         ],
         "libList": [],

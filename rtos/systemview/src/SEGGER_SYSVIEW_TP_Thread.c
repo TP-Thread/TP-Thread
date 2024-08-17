@@ -125,7 +125,7 @@ static U64 _cbGetTime(void) {
 */
 void SYSVIEW_AddTask(U32 xHandle, const char* pcTaskName, unsigned uxCurrentPriority, U32  pxStack, unsigned uStackHighWaterMark) {
   
-  if (memcmp(pcTaskName, "IDLE", 5) == 0) {
+  if (memcmp(pcTaskName, "Idle", 5) == 0) {
     return;
   }
   
@@ -156,7 +156,7 @@ void SYSVIEW_AddTask(U32 xHandle, const char* pcTaskName, unsigned uxCurrentPrio
 void SYSVIEW_UpdateTask(U32 xHandle, const char* pcTaskName, unsigned uxCurrentPriority, U32 pxStack, unsigned uStackHighWaterMark) {
   unsigned n;
   
-  if (memcmp(pcTaskName, "IDLE", 5) == 0) {
+  if (memcmp(pcTaskName, "Idle", 5) == 0) {
     return;
   }
 
