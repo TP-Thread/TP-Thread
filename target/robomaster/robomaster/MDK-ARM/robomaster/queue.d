@@ -1,7 +1,7 @@
 robomaster\queue.o: ..\..\..\..\rtos\tp-thread\src\queue.c
 robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
 robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
-robomaster\queue.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\queue.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\queue.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\queue.o: ../../../../rtos/tp-thread/inc/tp_config.h

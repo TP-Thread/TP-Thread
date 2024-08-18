@@ -1,6 +1,6 @@
 robomaster\heap_4.o: ..\..\..\..\rtos\tp-thread\src\heap_4.c
 robomaster\heap_4.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
-robomaster\heap_4.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\heap_4.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\heap_4.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\heap_4.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\heap_4.o: ../../../../rtos/tp-thread/inc/tp_config.h

@@ -25,7 +25,7 @@
  * 1 tab == 4 spaces!
  */
 
-#include "tp_thread.h"
+#include "tp_define.h"
 #include "task.h"
 #include "croutine.h"
 

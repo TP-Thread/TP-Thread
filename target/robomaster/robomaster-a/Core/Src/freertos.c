@@ -25,7 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "tp_define.h"
+#include "tp_thread.h"
 #include "SEGGER_SYSVIEW.h"
 
 /* USER CODE END Includes */
@@ -131,7 +131,7 @@ void Led_Entry(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	LED_R_Toggle();
+	LED_G_Toggle();
     osDelay(1000);
   }
   /* USER CODE END Led_Entry */

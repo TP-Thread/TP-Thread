@@ -31,11 +31,26 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "drv_key.h"
+#include "drv_uart.h"
+//#include "bsp_tim.h" 
+//#include "bsp_beep.h"
+//#include "bsp_vin.h"
+//#include "bsp_sbus.h"
+//#include "bsp_oled.h"
+//#include "bsp_can.h"
 
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+extern ADC_HandleTypeDef hadc1;
+extern ADC_HandleTypeDef hadc3;
+// extern CAN_HandleTypeDef hcan1;
+// extern CAN_HandleTypeDef hcan2;
+extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart6;
+extern DMA_HandleTypeDef hdma_usart1_rx;
 
 /* USER CODE END ET */
 
@@ -46,6 +61,7 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
+#define ROBOMASTER_A
 
 /* USER CODE END EM */
 

@@ -7,8 +7,7 @@
  */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
-#include "cmsis_os.h"
+#include "tp_thread.h"
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -20,7 +19,7 @@ void Index_Entry(void *argument)
 {
   while (1)
   {
-    LED_G_Toggle();
+    LED_R_Toggle();
     osDelay(1000);
   }
 }

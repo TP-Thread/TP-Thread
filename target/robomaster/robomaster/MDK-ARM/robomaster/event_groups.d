@@ -1,6 +1,6 @@
 robomaster\event_groups.o: ..\..\..\..\rtos\tp-thread\src\event_groups.c
 robomaster\event_groups.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
-robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\event_groups.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\event_groups.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/tp_config.h
@@ -19,5 +19,5 @@ robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/portmacro.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/mpu_wrappers.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/task.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/list.h
-robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/timers.h
+robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/timer.h
 robomaster\event_groups.o: ../../../../rtos/tp-thread/inc/event_groups.h

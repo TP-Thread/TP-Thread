@@ -24,7 +24,7 @@
 #define FREERTOS_MPOOL_H_
 
 #include <stdint.h>
-#include "tp_thread.h"
+#include "tp_define.h"
 #include "semphr.h"
 
 /* Memory Pool implementation definitions */

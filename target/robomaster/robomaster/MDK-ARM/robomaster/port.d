@@ -1,5 +1,5 @@
 robomaster\port.o: ..\..\..\..\rtos\tp-thread\src\port.c
-robomaster\port.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\port.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\port.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\port.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\port.o: ../../../../rtos/tp-thread/inc/tp_config.h

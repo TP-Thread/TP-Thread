@@ -25,9 +25,8 @@
  * 1 tab == 4 spaces!
  */
 
-
-#ifndef TIMERS_H
-#define TIMERS_H
+#ifndef TIMER_H
+#define TIMER_H
 
 /*lint -save -e537 This headers are only multiply included if the application code
 happens to also be including task.h. */
@@ -1299,7 +1298,4 @@ BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommand
 #ifdef __cplusplus
 }
 #endif
-#endif /* TIMERS_H */
-
-
-
+#endif /* TIMER_H */

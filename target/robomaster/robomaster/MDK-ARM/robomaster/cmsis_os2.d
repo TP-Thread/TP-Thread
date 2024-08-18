@@ -5,7 +5,7 @@ robomaster\cmsis_os2.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\cmsis_os2.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\cmsis_os2.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 robomaster\cmsis_os2.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
-robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/tp_config.h
 robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h
 robomaster\cmsis_os2.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
@@ -22,8 +22,8 @@ robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/portmacro.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/mpu_wrappers.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/task.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/list.h
-robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/event_groups.h
-robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/timers.h
+robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/event.h
+robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/timer.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/semphr.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/queue.h
 robomaster\cmsis_os2.o: ../../../../rtos/tp-thread/inc/freertos_mpool.h

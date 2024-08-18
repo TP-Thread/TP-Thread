@@ -33,10 +33,10 @@ all the API functions to use the MPU wrappers.  That should only be done when
 task.h is included from an application file. */
 #define MPU_WRAPPERS_INCLUDED_FROM_API_FILE
 
-#include "tp_thread.h"
+#include "tp_define.h"
 #include "task.h"
 #include "queue.h"
-#include "timers.h"
+#include "timer.h"
 
 #if ( INCLUDE_xTimerPendFunctionCall == 1 ) && ( configUSE_TIMERS == 0 )
 	#error configUSE_TIMERS must be set to 1 to make the xTimerPendFunctionCall() function available.
@@ -147,11 +147,11 @@ PRIVILEGED_DATA static TaskHandle_t xTimerTaskHandle = NULL;
 
 #if( configSUPPORT_STATIC_ALLOCATION == 1 )
 
-	/* If static allocation is supported then the application must provide the
-	following callback function - which enables the application to optionally
-	provide the memory that will be used by the timer task as the task's stack
-	and TCB. */
-	extern void vApplicationGetTimerTaskMemory( StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize );
+/* If static allocation is supported then the application must provide the
+following callback function - which enables the application to optionally
+provide the memory that will be used by the timer task as the task's stack
+and TCB. */
+extern void vApplicationGetTimerTaskMemory( StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize );
 
 #endif
 

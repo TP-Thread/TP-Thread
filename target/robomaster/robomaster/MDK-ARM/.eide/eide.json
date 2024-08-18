@@ -96,31 +96,31 @@
                 "path": "../../../../rtos/tp-thread/src/cmsis_os2.c"
               },
               {
-                "path": "../../../../rtos/tp-thread/src/tasks.c"
+                "path": "../../../../rtos/tp-thread/src/list.c"
               },
               {
-                "path": "../../../../rtos/tp-thread/src/timers.c"
+                "path": "../../../../rtos/tp-thread/src/task.c"
+              },
+              {
+                "path": "../../../../rtos/tp-thread/src/timer.c"
               },
               {
                 "path": "../../../../rtos/tp-thread/src/queue.c"
               },
               {
-                "path": "../../../../rtos/tp-thread/src/list.c"
+                "path": "../../../../rtos/tp-thread/src/event.c"
               },
               {
-                "path": "../../../../rtos/tp-thread/src/event_groups.c"
-              },
-              {
-                "path": "../../../../rtos/tp-thread/src/stream_buffer.c"
-              },
-              {
-                "path": "../../../../rtos/tp-thread/src/croutine.c"
+                "path": "../../../../rtos/tp-thread/src/port.c"
               },
               {
                 "path": "../../../../rtos/tp-thread/src/heap_4.c"
               },
               {
-                "path": "../../../../rtos/tp-thread/src/port.c"
+                "path": "../../../../rtos/tp-thread/src/croutine.c"
+              },
+              {
+                "path": "../../../../rtos/tp-thread/src/stream_buffer.c"
               }
             ],
             "folders": []

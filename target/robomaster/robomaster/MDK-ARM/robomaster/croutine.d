@@ -1,5 +1,5 @@
 robomaster\croutine.o: ..\..\..\..\rtos\tp-thread\src\croutine.c
-robomaster\croutine.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\croutine.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\croutine.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\croutine.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\croutine.o: ../../../../rtos/tp-thread/inc/tp_config.h

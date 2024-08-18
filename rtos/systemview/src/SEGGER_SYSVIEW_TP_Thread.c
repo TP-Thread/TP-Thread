@@ -51,7 +51,7 @@ File    : SEGGER_SYSVIEW_FreeRTOS.c
 Purpose : Interface between FreeRTOS and SystemView.
 Revision: $Rev: 7947 $
 */
-#include "tp_thread.h"
+#include "tp_define.h"
 #include "task.h"
 #include "SEGGER_SYSVIEW.h"
 #include "SEGGER_SYSVIEW_TP_Thread.h"

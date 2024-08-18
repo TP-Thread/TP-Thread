@@ -1,7 +1,7 @@
 #ifndef DRV_KEY_H
 #define DRV_KEY_H
 
-#include "tp_define.h"
+#include "tp_thread.h"
 
 #define KEY_DOWN	1
 #define KEY_UP		0

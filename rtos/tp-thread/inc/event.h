@@ -29,7 +29,7 @@
 #define EVENT_GROUPS_H
 
 /* FreeRTOS includes. */
-#include "timers.h"
+#include "timer.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,5 +1,5 @@
 robomaster\segger_sysview_tp_thread.o: ..\..\..\..\rtos\systemview\src\SEGGER_SYSVIEW_TP_Thread.c
-robomaster\segger_sysview_tp_thread.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\segger_sysview_tp_thread.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\segger_sysview_tp_thread.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\segger_sysview_tp_thread.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\segger_sysview_tp_thread.o: ../../../../rtos/tp-thread/inc/tp_config.h

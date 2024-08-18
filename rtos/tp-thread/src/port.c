@@ -30,7 +30,7 @@
  *----------------------------------------------------------*/
 
 /* Scheduler includes. */
-#include "tp_thread.h"
+#include "tp_define.h"
 #include "task.h"
 
 #ifndef __TARGET_FPU_VFP

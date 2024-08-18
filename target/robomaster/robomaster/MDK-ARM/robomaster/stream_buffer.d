@@ -1,7 +1,7 @@
 robomaster\stream_buffer.o: ..\..\..\..\rtos\tp-thread\src\stream_buffer.c
 robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
-robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\stream_buffer.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\stream_buffer.o: ../../../../rtos/tp-thread/inc/tp_config.h
 robomaster\stream_buffer.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_TP_Thread.h

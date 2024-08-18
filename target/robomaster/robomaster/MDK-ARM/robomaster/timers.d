@@ -1,6 +1,6 @@
 robomaster\timers.o: ..\..\..\..\rtos\tp-thread\src\timers.c
 robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
-robomaster\timers.o: ../../../../rtos/tp-thread/inc/tp_thread.h
+robomaster\timers.o: ../../../../rtos/tp-thread/inc/tp_define.h
 robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stddef.h
 robomaster\timers.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 robomaster\timers.o: ../../../../rtos/tp-thread/inc/tp_config.h

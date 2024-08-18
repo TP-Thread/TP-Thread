@@ -25,9 +25,8 @@
  * 1 tab == 4 spaces!
  */
 
-
 #include <stdlib.h>
-#include "tp_thread.h"
+#include "tp_define.h"
 #include "list.h"
 
 /*-----------------------------------------------------------

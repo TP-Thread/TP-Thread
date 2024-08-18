@@ -35,6 +35,8 @@ robomaster-a\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 robomaster-a\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 robomaster-a\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 robomaster-a\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+robomaster-a\main.o: ../../../../module/driver/inc/drv_key.h
+robomaster-a\main.o: ../Core/Inc/tp_thread.h
 robomaster-a\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 robomaster-a\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 robomaster-a\main.o: ../Core/Inc/FreeRTOSConfig.h
@@ -54,6 +56,9 @@ robomaster-a\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrap
 robomaster-a\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 robomaster-a\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 robomaster-a\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+robomaster-a\main.o: ../Core/Inc/main.h
+robomaster-a\main.o: ../../../../module/driver/inc/drv_uart.h
+robomaster-a\main.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
 robomaster-a\main.o: ../Core/Inc/adc.h
 robomaster-a\main.o: ../Core/Inc/can.h
 robomaster-a\main.o: ../Core/Inc/dma.h

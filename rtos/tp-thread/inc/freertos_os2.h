@@ -26,7 +26,7 @@
 #include <string.h>
 #include <stdint.h>
 
-#include "tp_thread.h"                   // ARM.FreeRTOS::RTOS:Core
+#include "tp_define.h"                   // ARM.FreeRTOS::RTOS:Core
 
 #include CMSIS_device_header
 
