@@ -36,9 +36,10 @@ extern "C" {
 //#include "bsp_tim.h" 
 //#include "bsp_beep.h"
 //#include "bsp_vin.h"
-//#include "bsp_sbus.h"
 //#include "bsp_oled.h"
 //#include "bsp_can.h"
+
+#include "prot_sbus.h"
 
 /* USER CODE END Includes */
 

@@ -20,9 +20,17 @@ const osThreadAttr_t Index_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for Mixer */
+osThreadId_t MixerHandle;
+const osThreadAttr_t Mixer_attributes = {
+  .name = "Mixer",
+  .stack_size = 512 * 4,
+  .priority = (osPriority_t) osPriorityAboveNormal,
+};
 
 /* Private function prototypes -----------------------------------------------*/
 extern void Index_Entry(void *argument);
+extern void Mixer_Entry(void *argument);
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -38,4 +46,6 @@ void TP_Thread_Init(void)
 	/* Create the thread(s) */
 	/* creation of Index */
 	IndexHandle = osThreadNew(Index_Entry, NULL, &Index_attributes);
+    /* creation of Mixer */
+    MixerHandle = osThreadNew(Mixer_Entry, NULL, &Mixer_attributes);
 }

@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Middlewares/Third_Party/SystemView/Inc;../../../../module/driver/inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Middlewares/Third_Party/SystemView/Inc;../../../../module/driver/inc;../../../../module/protocol/inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -716,12 +716,27 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Application/User/Prot</GroupName>
+          <Files>
+            <File>
+              <FileName>prot_sbus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\module\protocol\src\prot_sbus.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Application/User/Task</GroupName>
           <Files>
             <File>
               <FileName>task_index.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\rtos\task\task_index.c</FilePath>
+            </File>
+            <File>
+              <FileName>task_mixer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\rtos\task\task_mixer.c</FilePath>
             </File>
           </Files>
         </Group>

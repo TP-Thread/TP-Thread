@@ -60,3 +60,4 @@ robomaster-a\gpio.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cm
 robomaster-a\gpio.o: ../Core/Inc/main.h
 robomaster-a\gpio.o: ../../../../module/driver/inc/drv_uart.h
 robomaster-a\gpio.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster-a\gpio.o: ../../../../module/protocol/inc/prot_sbus.h

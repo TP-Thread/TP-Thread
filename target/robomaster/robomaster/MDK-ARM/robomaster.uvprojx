@@ -723,6 +723,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\rtos\task\task_index.c</FilePath>
             </File>
+            <File>
+              <FileName>task_mixer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\rtos\task\task_mixer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -917,6 +922,16 @@
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/system_stm32f4xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Application/User/Prot</GroupName>
+          <Files>
+            <File>
+              <FileName>prot_sbus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\module\protocol\src\prot_sbus.c</FilePath>
             </File>
           </Files>
         </Group>

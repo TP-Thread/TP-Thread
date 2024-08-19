@@ -60,3 +60,4 @@ robomaster-a\drv_key.o: ../../../../module/driver/inc/drv_key.h
 robomaster-a\drv_key.o: ../../../../module/driver/inc/drv_uart.h
 robomaster-a\drv_key.o: ../Core/Inc/tp_thread.h
 robomaster-a\drv_key.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster-a\drv_key.o: ../../../../module/protocol/inc/prot_sbus.h

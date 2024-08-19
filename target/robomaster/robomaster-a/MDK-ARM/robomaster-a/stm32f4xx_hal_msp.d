@@ -59,3 +59,4 @@ robomaster-a\stm32f4xx_hal_msp.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMS
 robomaster-a\stm32f4xx_hal_msp.o: ../Core/Inc/main.h
 robomaster-a\stm32f4xx_hal_msp.o: ../../../../module/driver/inc/drv_uart.h
 robomaster-a\stm32f4xx_hal_msp.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster-a\stm32f4xx_hal_msp.o: ../../../../module/protocol/inc/prot_sbus.h

@@ -59,6 +59,7 @@ robomaster\main.o: ../../../../rtos/tp-thread/inc/cmsis_os2.h
 robomaster\main.o: ../Core/Inc/main.h
 robomaster\main.o: ../../../../module/driver/inc/drv_uart.h
 robomaster\main.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster\main.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster\main.o: ../Core/Inc/adc.h
 robomaster\main.o: ../Core/Inc/can.h
 robomaster\main.o: ../Core/Inc/dma.h

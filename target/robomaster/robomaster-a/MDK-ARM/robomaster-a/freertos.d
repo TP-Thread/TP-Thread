@@ -59,3 +59,4 @@ robomaster-a\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V
 robomaster-a\freertos.o: ../Core/Inc/main.h
 robomaster-a\freertos.o: ../../../../module/driver/inc/drv_uart.h
 robomaster-a\freertos.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster-a\freertos.o: ../../../../module/protocol/inc/prot_sbus.h

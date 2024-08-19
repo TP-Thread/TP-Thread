@@ -1,31 +1,32 @@
 /**
- ******************************************************************************
- * @作  者  两点一线
- * @版  本  V1.2
- * @日  期  2024-02-20
- * @内  容  遥控器处理，遥控器是通过SBUS的协议传输，利用DMA传输方式节约CPU
- *          资源，利用串口空闲中断来拉起处理函数，同时提供一些掉线重启DMA，串口
- *          的方式保证热插拔的稳定性。
- ******************************************************************************
- */
+  ******************************************************************************
+  * @file    prot_sbus.c
+  * @author  TP-Thread
+  * @brief   遥控器SBUS信号处理.
+  *          遥控器通过SBUS的协议传输，利用DMA传输方式节约CPU资源，利用串口空闲
+  *          中断来拉起处理函数。  
+  ******************************************************************************
+  */
 
-#include "bsp_sbus.h"
+/* Includes ------------------------------------------------------------------*/
+#include "prot_sbus.h"
 
+/* Private variables ---------------------------------------------------------*/
 uint8_t sbus_buf[SBUS_FRAME_SIZE]; // 接收数据缓存数组，为25个字节，给了50个字节长度，防止DMA传输越界
+uint8_t sbus_state;	  // 遥控器与接收器连接状态 0=未连接，1=正常连接
 
 SBUS_Struct SBUS_CH; // 遥控器通道数据
-
-uint8_t sbus_state;	  // 遥控器与接收器连接状态 0=未连接，1=正常连接
 uint16_t command[16]; // 遥控器通道数据转换成PWM值
 
+/* Private function prototypes -----------------------------------------------*/
 /**
  * @brief	使能IDLE串口空闲中断和DMA接收
  */
 void SBUS_Init(void)
 {
-	__HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
+	__HAL_UART_ENABLE_IT(&suart, UART_IT_IDLE);
 
-	HAL_UART_Receive_DMA(&huart1, sbus_buf, SBUS_MAX_LEN);
+	HAL_UART_Receive_DMA(&suart, sbus_buf, SBUS_MAX_LEN);
 }
 
 /**
@@ -77,21 +78,21 @@ uint8_t SBUS_Process(uint8_t *buf)
  */
 void HAL_UART_IdleCpltCallback(UART_HandleTypeDef *huart)
 {
-	if ((__HAL_UART_GET_FLAG(&huart1, UART_FLAG_IDLE)) != RESET) // idle标志被置位
+	if ((__HAL_UART_GET_FLAG(&suart, UART_FLAG_IDLE)) != RESET) // idle标志被置位
 	{
-		__HAL_UART_CLEAR_IDLEFLAG(&huart1); // 清除标志位
-		HAL_UART_DMAStop(&huart1);			// 关闭DMA防止在处理数据时候接收数据，产生干扰
+		__HAL_UART_CLEAR_IDLEFLAG(&suart); // 清除标志位
+		HAL_UART_DMAStop(&suart);			// 关闭DMA防止在处理数据时候接收数据，产生干扰
 
 		// 实际接收的字节= 预先定义的接收总字节 - __HAL_DMA_GET_COUNTER()
-		if ((SBUS_MAX_LEN - __HAL_DMA_GET_COUNTER(&hdma_usart1_rx)) == SBUS_FRAME_SIZE)
+		if ((SBUS_MAX_LEN - __HAL_DMA_GET_COUNTER(&hdma_susart_rx)) == SBUS_FRAME_SIZE)
 		{
 			sbus_state = SBUS_Process(sbus_buf);
 		}
 		// 重新设置预先定义的接收总字节
-		__HAL_DMA_SET_COUNTER(&hdma_usart1_rx, SBUS_MAX_LEN);
+		__HAL_DMA_SET_COUNTER(&hdma_susart_rx, SBUS_MAX_LEN);
 
 		// 打开DMA接收
-		HAL_UART_Receive_DMA(&huart1, sbus_buf, SBUS_MAX_LEN);
+		HAL_UART_Receive_DMA(&suart, sbus_buf, SBUS_MAX_LEN);
 	}
 }
 

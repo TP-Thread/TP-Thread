@@ -59,4 +59,5 @@ robomaster-a\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RT
 robomaster-a\stm32f4xx_it.o: ../Core/Inc/main.h
 robomaster-a\stm32f4xx_it.o: ../../../../module/driver/inc/drv_uart.h
 robomaster-a\stm32f4xx_it.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster-a\stm32f4xx_it.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster-a\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h

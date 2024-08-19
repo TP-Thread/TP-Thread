@@ -59,4 +59,5 @@ robomaster\stm32f4xx_it.o: ../../../../rtos/tp-thread/inc/cmsis_os2.h
 robomaster\stm32f4xx_it.o: ../Core/Inc/main.h
 robomaster\stm32f4xx_it.o: ../../../../module/driver/inc/drv_uart.h
 robomaster\stm32f4xx_it.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster\stm32f4xx_it.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h

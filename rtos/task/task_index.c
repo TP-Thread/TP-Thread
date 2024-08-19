@@ -17,9 +17,9 @@
  */
 void Index_Entry(void *argument)
 {
-  while (1)
-  {
-    LED_R_Toggle();
-    osDelay(1000);
-  }
+	while (1)
+	{
+		LED_R_Toggle();
+		osDelay(1000);
+	}
 }

@@ -59,4 +59,5 @@ robomaster-a\drv_uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.
 robomaster-a\drv_uart.o: ../../../../module/driver/inc/drv_key.h
 robomaster-a\drv_uart.o: ../Core/Inc/tp_thread.h
 robomaster-a\drv_uart.o: ../../../../module/driver/inc/drv_uart.h
+robomaster-a\drv_uart.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster-a\drv_uart.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h

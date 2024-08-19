@@ -59,3 +59,4 @@ robomaster\tp_thread.o: ../../../../module/driver/inc/drv_key.h
 robomaster\tp_thread.o: ../../../../rtos/tp-thread/inc/tp_thread.h
 robomaster\tp_thread.o: ../../../../module/driver/inc/drv_uart.h
 robomaster\tp_thread.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster\tp_thread.o: ../../../../module/protocol/inc/prot_sbus.h

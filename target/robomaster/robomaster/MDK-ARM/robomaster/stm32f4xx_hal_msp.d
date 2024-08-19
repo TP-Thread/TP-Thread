@@ -59,3 +59,4 @@ robomaster\stm32f4xx_hal_msp.o: ../../../../rtos/tp-thread/inc/cmsis_os2.h
 robomaster\stm32f4xx_hal_msp.o: ../Core/Inc/main.h
 robomaster\stm32f4xx_hal_msp.o: ../../../../module/driver/inc/drv_uart.h
 robomaster\stm32f4xx_hal_msp.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster\stm32f4xx_hal_msp.o: ../../../../module/protocol/inc/prot_sbus.h

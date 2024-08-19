@@ -167,6 +167,8 @@ void DebugMon_Handler(void)
 void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
+  // 自定义的串口中断空闲回调函数（HAL库未实现）
+  HAL_UART_IdleCpltCallback(&huart1);
 
   /* USER CODE END USART1_IRQn 0 */
   HAL_UART_IRQHandler(&huart1);

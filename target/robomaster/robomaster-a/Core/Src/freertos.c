@@ -63,6 +63,13 @@ const osThreadAttr_t Index_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for Mixer */
+osThreadId_t MixerHandle;
+const osThreadAttr_t Mixer_attributes = {
+  .name = "Mixer",
+  .stack_size = 512 * 4,
+  .priority = (osPriority_t) osPriorityAboveNormal,
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -71,6 +78,7 @@ const osThreadAttr_t Index_attributes = {
 
 void Led_Entry(void *argument);
 extern void Index_Entry(void *argument);
+extern void Mixer_Entry(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -107,6 +115,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of Index */
   IndexHandle = osThreadNew(Index_Entry, NULL, &Index_attributes);
+
+  /* creation of Mixer */
+  MixerHandle = osThreadNew(Mixer_Entry, NULL, &Mixer_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */

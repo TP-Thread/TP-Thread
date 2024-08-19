@@ -60,3 +60,4 @@ robomaster\can.o: ../../../../rtos/tp-thread/inc/cmsis_os2.h
 robomaster\can.o: ../Core/Inc/main.h
 robomaster\can.o: ../../../../module/driver/inc/drv_uart.h
 robomaster\can.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster\can.o: ../../../../module/protocol/inc/prot_sbus.h

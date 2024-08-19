@@ -60,3 +60,4 @@ robomaster\gpio.o: ../../../../rtos/tp-thread/inc/cmsis_os2.h
 robomaster\gpio.o: ../Core/Inc/main.h
 robomaster\gpio.o: ../../../../module/driver/inc/drv_uart.h
 robomaster\gpio.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster\gpio.o: ../../../../module/protocol/inc/prot_sbus.h

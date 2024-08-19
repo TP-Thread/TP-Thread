@@ -60,3 +60,4 @@ robomaster-a\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/c
 robomaster-a\usart.o: ../Core/Inc/main.h
 robomaster-a\usart.o: ../../../../module/driver/inc/drv_uart.h
 robomaster-a\usart.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster-a\usart.o: ../../../../module/protocol/inc/prot_sbus.h
