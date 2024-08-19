@@ -1,0 +1,12 @@
+robomaster-c\segger_sysview.o: ..\Middlewares\Third_Party\SystemView\Src\SEGGER_SYSVIEW.c
+robomaster-c\segger_sysview.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+robomaster-c\segger_sysview.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+robomaster-c\segger_sysview.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+robomaster-c\segger_sysview.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_Int.h
+robomaster-c\segger_sysview.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW.h
+robomaster-c\segger_sysview.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER.h
+robomaster-c\segger_sysview.o: ../Middlewares/Third_Party/SystemView/Inc/Global.h
+robomaster-c\segger_sysview.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_ConfDefaults.h
+robomaster-c\segger_sysview.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_SYSVIEW_Conf.h
+robomaster-c\segger_sysview.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_RTT_Conf.h
+robomaster-c\segger_sysview.o: ../Middlewares/Third_Party/SystemView/Inc/SEGGER_RTT.h

@@ -1,0 +1,12 @@
+tip\segger_sysview.o: ..\..\..\..\rtos\systemview\src\SEGGER_SYSVIEW.c
+tip\segger_sysview.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
+tip\segger_sysview.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+tip\segger_sysview.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+tip\segger_sysview.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Int.h
+tip\segger_sysview.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW.h
+tip\segger_sysview.o: ../../../../rtos/systemview/inc/SEGGER.h
+tip\segger_sysview.o: ../../../../rtos/systemview/inc/Global.h
+tip\segger_sysview.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_ConfDefaults.h
+tip\segger_sysview.o: ../../../../rtos/systemview/inc/SEGGER_SYSVIEW_Conf.h
+tip\segger_sysview.o: ../../../../rtos/systemview/inc/SEGGER_RTT_Conf.h
+tip\segger_sysview.o: ../../../../rtos/systemview/inc/SEGGER_RTT.h
