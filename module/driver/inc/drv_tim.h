@@ -1,12 +1,11 @@
-#ifndef BSP_TIM_H
-#define BSP_TIM_H
+#ifndef DRV_TIM_H
+#define DRV_TIM_H
 
-#include "main.h"
+#include "tp_thread.h"
 
-extern TIM_HandleTypeDef htim6;
-
-
+void TIM_Init(void);
+void XPWM_Set(uint32_t channe, uint16_t compare);
 void HAL_Delay_us(uint16_t Delay_us);
-uint8_t TIM6_CheckIrqStatus(void);
+// uint8_t TIM6_CheckIrqStatus(void);
 
 #endif

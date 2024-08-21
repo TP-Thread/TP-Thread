@@ -34,6 +34,7 @@ robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
@@ -59,12 +60,19 @@ robomaster-c\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 robomaster-c\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 robomaster-c\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 robomaster-c\main.o: ../Core/Inc/main.h
+robomaster-c\main.o: ../../../../module/driver/inc/drv_exti.h
 robomaster-c\main.o: ../../../../module/driver/inc/drv_uart.h
 robomaster-c\main.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster-c\main.o: ../../../../module/driver/inc/drv_tim.h
+robomaster-c\main.o: ../../../../module/driver/inc/drv_ist8310.h
+robomaster-c\main.o: ../../../../module/driver/inc/drv_bmi088.h
 robomaster-c\main.o: ../../../../module/protocol/inc/prot_sbus.h
+robomaster-c\main.o: ../../../../module/algorithm/inc/algo_pid.h
 robomaster-c\main.o: ../Core/Inc/adc.h
 robomaster-c\main.o: ../Core/Inc/can.h
 robomaster-c\main.o: ../Core/Inc/dma.h
 robomaster-c\main.o: ../Core/Inc/i2c.h
+robomaster-c\main.o: ../Core/Inc/spi.h
+robomaster-c\main.o: ../Core/Inc/tim.h
 robomaster-c\main.o: ../Core/Inc/usart.h
 robomaster-c\main.o: ../Core/Inc/gpio.h

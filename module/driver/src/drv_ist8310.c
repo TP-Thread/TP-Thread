@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    bsp_key.c
+  * @file    drv_ist8310.c
   * @author  TP-Thread
   * @brief   IST8310三轴数字磁力计初始化和读取磁场数据.
   ******************************************************************************
@@ -9,8 +9,14 @@
 /* Includes ------------------------------------------------------------------*/
 #include "drv_ist8310.h"
 
+/* Private macro -------------------------------------------------------------*/
+#define IST8310_IIC_ADDRESS		0x0E  	//the I2C address of IST8310
+
+#define IST8310_WHO_AM_I 		0x00    //ist8310 "who am I " 
+#define IST8310_WHO_AM_I_VALUE 	0x10 	//device ID
+
 /* Private variables ---------------------------------------------------------*/
-float mag[3];	//x,y,z轴磁场数组
+ist8310_t ist8310_data;
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -22,9 +28,9 @@ uint8_t IST8310_Init(void)
 	uint8_t res = 0;
 
 	//重启IST8310
-	HAL_GPIO_WritePin(RSTN_IST8310_GPIO_Port, RSTN_IST8310_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(RSTN_MAG_GPIO_Port, RSTN_MAG_Pin, GPIO_PIN_RESET);
 	HAL_Delay(50);
-	HAL_GPIO_WritePin(RSTN_IST8310_GPIO_Port, RSTN_IST8310_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(RSTN_MAG_GPIO_Port, RSTN_MAG_Pin, GPIO_PIN_SET);
 	HAL_Delay(50);
 
 	res = IST8310_ReadReg(IST8310_WHO_AM_I);

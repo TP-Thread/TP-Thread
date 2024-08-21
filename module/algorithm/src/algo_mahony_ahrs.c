@@ -12,7 +12,7 @@
  ******************************************************************************
  */
 
-#include "MahonyAHRS.h"
+#include "algo_mahony_ahrs.h"
 #include <math.h>
 
 #define sampleFreq 1000.0f	   // sample frequency in Hz

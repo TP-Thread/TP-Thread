@@ -1,24 +1,50 @@
-/**			                                                                              
+/**
   ******************************************************************************
-  * @作  者  没PF的老亚瑟
-  * @版  本  V1.0
-  * @日  期  2022-12-29
-  * @内  容  定时器10ms定时
-  *
-  ******************************************************************************
-  * @说  明
-  *
-  * 1.TIM6定时器终于产生定时信号，通过标志位判断的函数传递
-  * 2.TIM定时器输入捕获
+  * @file    drv_tim.c
+  * @author  TP-Thread
+  * @brief   Timer.
   ******************************************************************************
   */
 
-#include "bsp_tim.h" 
+/* Includes ------------------------------------------------------------------*/
+#include "drv_tim.h" 
+
+/* Private variables ---------------------------------------------------------*/
+//中断循环状态控制标志位
+//uint8_t flag_tim7 = 0;
+
+/* Private functions ---------------------------------------------------------*/
+/**
+ * @brief	开启定时器PWM输出
+ */
+void TIM_Init(void)
+{
+	HAL_TIM_PWM_Start(&xtim, XTIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&xtim, XTIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&xtim, XTIM_CHANNEL_3);
+	HAL_TIM_PWM_Start(&xtim, XTIM_CHANNEL_4);
+	
+}
 
 /**
-  * @brief			微秒级延时
-  * @param      	Delay_us      延时微秒数（Delay_us < 1000）
-  * @retval         无
+ * @brief	PWM占空比设置,周期：20ms,高电平：0.5~2.5ms
+ * @param  	pwm: 
+ * @param  channel TIM Channels to be configured.
+ *            @arg XTIM_CHANNEL_1: TIM Channel 1 selected
+ *            @arg XTIM_CHANNEL_2: TIM Channel 2 selected
+ *            @arg XTIM_CHANNEL_3: TIM Channel 3 selected
+ *            @arg XTIM_CHANNEL_4: TIM Channel 4 selected
+ * @param  compare specifies the Capture Compare register new value: 500~2500.
+ */
+void XPWM_Set(uint32_t channel, uint16_t compare)
+{
+    __HAL_TIM_SetCompare(&xtim, channel, compare);
+}
+
+/**
+  * @brief		微秒级延时
+  * @param      Delay_us      延时微秒数（Delay_us < 1000）
+  * @retval     无
   */
 void HAL_Delay_us(uint16_t Delay_us)
 {
@@ -50,20 +76,16 @@ void HAL_Delay_us(uint16_t Delay_us)
     }
 }
 
-
-//中断循环状态控制标志位
-//uint8_t flag_tim6 = 0;
-
 /**
-  * @简  述  TIM6 更新中断回调函数
+  * @简  述  TIM7 更新中断回调函数
   * @参  数  无
   * @返回值  无
   */
 //void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 //{
-//	if(htim->Instance == TIM6){
+//	if(htim->Instance == TIM7){
 //		//中断处理内容
-//		flag_tim6 = 1;  //置位10ms标志位
+//		flag_tim7 = 1;  //置位10ms标志位
 //	}
 //}
 
@@ -72,15 +94,14 @@ void HAL_Delay_us(uint16_t Delay_us)
   * @param  None
   * @retval None
   */
-//uint8_t TIM6_CheckIrqStatus(void)
+//uint8_t TIM7_CheckIrqStatus(void)
 //{
 //	//确认中断,进入控制周期
-//	if(flag_tim6 != 0) 
+//	if(flag_tim7 != 0) 
 //	{
-//		flag_tim6 = 0;
+//		flag_tim7 = 0;
 //		return 1;
 //	}
 
 //	return 0;
 //}
-/******************* (C) 版权 TP-Tech **************************************/

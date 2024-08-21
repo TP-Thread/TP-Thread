@@ -34,6 +34,7 @@ robomaster-c\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i
 robomaster-c\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 robomaster-c\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 robomaster-c\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+robomaster-c\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 robomaster-c\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 robomaster-c\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 robomaster-c\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
@@ -59,7 +60,12 @@ robomaster-c\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/
 robomaster-c\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 robomaster-c\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 robomaster-c\stm32f4xx_it.o: ../Core/Inc/main.h
+robomaster-c\stm32f4xx_it.o: ../../../../module/driver/inc/drv_exti.h
 robomaster-c\stm32f4xx_it.o: ../../../../module/driver/inc/drv_uart.h
 robomaster-c\stm32f4xx_it.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
+robomaster-c\stm32f4xx_it.o: ../../../../module/driver/inc/drv_tim.h
+robomaster-c\stm32f4xx_it.o: ../../../../module/driver/inc/drv_ist8310.h
+robomaster-c\stm32f4xx_it.o: ../../../../module/driver/inc/drv_bmi088.h
 robomaster-c\stm32f4xx_it.o: ../../../../module/protocol/inc/prot_sbus.h
+robomaster-c\stm32f4xx_it.o: ../../../../module/algorithm/inc/algo_pid.h
 robomaster-c\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h

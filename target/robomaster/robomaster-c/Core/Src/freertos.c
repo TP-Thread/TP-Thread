@@ -70,6 +70,18 @@ const osThreadAttr_t Mixer_attributes = {
   .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityAboveNormal,
 };
+/* Definitions for Imu */
+osThreadId_t ImuHandle;
+const osThreadAttr_t Imu_attributes = {
+  .name = "Imu",
+  .stack_size = 1024 * 4,
+  .priority = (osPriority_t) osPriorityRealtime,
+};
+/* Definitions for Imu_Event */
+osEventFlagsId_t Imu_EventHandle;
+const osEventFlagsAttr_t Imu_Event_attributes = {
+  .name = "Imu_Event"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -79,6 +91,7 @@ const osThreadAttr_t Mixer_attributes = {
 void Led_Entry(void *argument);
 extern void Index_Entry(void *argument);
 extern void Mixer_Entry(void *argument);
+extern void Imu_Entry(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -119,9 +132,16 @@ void MX_FREERTOS_Init(void) {
   /* creation of Mixer */
   MixerHandle = osThreadNew(Mixer_Entry, NULL, &Mixer_attributes);
 
+  /* creation of Imu */
+  ImuHandle = osThreadNew(Imu_Entry, NULL, &Imu_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
+
+  /* Create the event(s) */
+  /* creation of Imu_Event */
+  Imu_EventHandle = osEventFlagsNew(&Imu_Event_attributes);
 
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
@@ -142,7 +162,7 @@ void Led_Entry(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	LED_B_Toggle();
+	LED_R_Toggle();
     osDelay(500);
   }
   /* USER CODE END Led_Entry */

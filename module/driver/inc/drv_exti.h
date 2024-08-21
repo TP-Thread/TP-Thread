@@ -1,11 +1,8 @@
-#ifndef __EXTI_H
-#define __EXTI_H
+#ifndef DRV_EXTI_H
+#define DRV_EXTI_H
 
-#include "main.h"
-#include "cmsis_os.h"
-
+#include "tp_thread.h"
 
 //void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 
-
-#endif /* __EXTI_H */
+#endif /* DRV_EXTI_H */

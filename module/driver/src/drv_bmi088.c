@@ -1,19 +1,59 @@
 /**
   ******************************************************************************
-  * @作  者  两点一线
-  * @版  本  V1.0
-  * @日  期  2023-4-28
-  * @内  容  BMI088是一款六轴惯性测量单元 (IMU)，三轴陀螺仪和三轴加速度计
+  * @file    drv_bmi088.c
+  * @author  TP-Thread
+  * @brief   BMI088六轴惯性测量单元，三轴陀螺仪和三轴加速度计
              用于配置BMI088陀螺仪 加速度计的各项参数并读取数据
   ******************************************************************************
   */
 
+/* Includes ------------------------------------------------------------------*/
 #include "drv_bmi088.h"
 #include "drv_bmi088_reg.h"
+
+/* Private macro -------------------------------------------------------------*/
+#define BMI088_TEMP_FACTOR 0.125f
+#define BMI088_TEMP_OFFSET 23.0f
+
+#define BMI088_GYRO_DATA_READY_BIT 0
+#define BMI088_ACCEL_DATA_READY_BIT 1
+#define BMI088_ACCEL_TEMP_DATA_READY_BIT 2
+
+#define BMI088_ACCEL_RANGE_3G
+//#define BMI088_ACCEL_RANGE_6G
+//#define BMI088_ACCEL_RANGE_12G
+//#define BMI088_ACCEL_RANGE_24G
+
+#define BMI088_GYRO_RANGE_2000
+//#define BMI088_GYRO_RANGE_1000
+//#define BMI088_GYRO_RANGE_500
+//#define BMI088_GYRO_RANGE_250
+//#define BMI088_GYRO_RANGE_125
+
+#define BMI088_ACCEL_3G_SEN 0.00091552734375f//3*10/32768 和g没关系，算法里面会归一化;如果想要得到实际的数据则3*9.8015/32768
+#define BMI088_ACCEL_6G_SEN 0.0018310546875f
+//#define BMI088_ACCEL_12G_SEN 0.0035894165039f 
+//#define BMI088_ACCEL_24G_SEN 0.0071788330078f
+
+#define BMI088_GYRO_2000_SEN 0.00106526443603169529841533860381f//(2000/32768)*(pi/180)
+#define BMI088_GYRO_1000_SEN 0.00053263221801584764920766930190693f
+#define BMI088_GYRO_500_SEN 0.00026631610900792382460383465095346f
+#define BMI088_GYRO_250_SEN 0.00013315805450396191230191732547673f
+#define BMI088_GYRO_125_SEN 0.000066579027251980956150958662738366f
+
+//加速度计和陀螺仪片选信号线控制
+#define BMI088_ACCEL_NS_L()		  	HAL_GPIO_WritePin(CS1_ACCEL_GPIO_Port, CS1_ACCEL_Pin, GPIO_PIN_RESET) 
+#define BMI088_ACCEL_NS_H()		  	HAL_GPIO_WritePin(CS1_ACCEL_GPIO_Port, CS1_ACCEL_Pin, GPIO_PIN_SET) 
+#define BMI088_GYRO_NS_L()		  	HAL_GPIO_WritePin(CS1_GYRO_GPIO_Port, CS1_GYRO_Pin, GPIO_PIN_RESET)
+#define BMI088_GYRO_NS_H()		  	HAL_GPIO_WritePin(CS1_GYRO_GPIO_Port, CS1_GYRO_Pin, GPIO_PIN_SET) 
+
+/* Private variables ---------------------------------------------------------*/
+bmi088_t bmi088_data;
 
 float BMI088_ACCEL_SEN = BMI088_ACCEL_3G_SEN;
 float BMI088_GYRO_SEN = BMI088_GYRO_2000_SEN;
 
+/* Private functions ---------------------------------------------------------*/
 /**
  * @brief	通过SPI向BMI088的寄存器写入一个字节,同时接收BMI088发送的数据（可以不用）
  * @param  t_data      写入值
@@ -152,15 +192,6 @@ void BMI088_Gyro_ReadRegs(uint8_t reg, uint8_t *buf, uint8_t len)
 }
 
 /**
- * @brief	BMI088初始化
- */
-void BMI088_Init(void)
-{
-    BMI088_Accel_Init();
-    BMI088_Gyro_Init();
-}
-
-/**
  * @brief	BMI088加速度计初始化
  */
 uint8_t BMI088_Accel_Init(void)
@@ -184,7 +215,7 @@ uint8_t BMI088_Accel_Init(void)
     BMI088_Accel_ReadReg(BMI088_ACC_CHIP_ID, res);
     if (res != BMI088_ACC_CHIP_ID_VALUE)
     {
-        printf("BMI088_ACC_CHIP_ID_VALUE:%d \n", res);
+        printf("BMI088_ACC_CHIP_ID_VALUE: %d\n", res);
         return 1;
     }
 
@@ -214,7 +245,7 @@ uint8_t BMI088_Gyro_Init(void)
     BMI088_Gyro_ReadReg(BMI088_GYRO_CHIP_ID, res);
     if (res != BMI088_GYRO_CHIP_ID_VALUE)
     {
-        printf("BMI088_GYRO_CHIP_ID_VALUE:%d \n", res);
+        printf("BMI088_GYRO_CHIP_ID_VALUE: %d\n", res);
         return 1;
     }
 
@@ -226,6 +257,15 @@ uint8_t BMI088_Gyro_Init(void)
     BMI088_Gyro_WriteReg(BMI088_GYRO_INT3_INT4_IO_MAP, BMI088_GYRO_DRDY_IO_INT3);
 
     return 0;
+}
+
+/**
+ * @brief	BMI088初始化
+ */
+void BMI088_Init(void)
+{
+    BMI088_Accel_Init();
+    BMI088_Gyro_Init();
 }
 
 /**

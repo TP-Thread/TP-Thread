@@ -5,20 +5,15 @@
 #include "tp_thread.h"
 
 /* Exported macro ------------------------------------------------------------*/
-#define IST8310_IIC_ADDRESS		0x0E  	//the I2C address of IST8310
-
-#define IST8310_WHO_AM_I 		0x00    //ist8310 "who am I " 
-#define IST8310_WHO_AM_I_VALUE 	0x10 	//device ID
 
 /* Exported types ------------------------------------------------------------*/
-extern I2C_HandleTypeDef hi2c3;
-extern float mag[3];	//x,y,z轴磁场数组
-
 typedef struct
 {
-  uint8_t status;
-  float mag[3];
-}ist8310_real_data_t;
+	uint8_t status;
+	float mag[3];
+} ist8310_t;
+
+extern ist8310_t ist8310_data;	//x,y,z轴磁场数组
 
 /* Exported functions prototypes ---------------------------------------------*/
 uint8_t IST8310_Init(void);
