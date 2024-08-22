@@ -42,9 +42,13 @@ extern "C" {
 #include "drv_ist8310.h"
 #include "drv_bmi088.h"
 
+#include "prot_ano.h"
 #include "prot_sbus.h"
 
 #include "algo_pid.h"
+#include "algo_attitude_ctrl.h"
+// #include "algo_position_ctrl.h"
+#include "algo_remote_ctrl.h"
 
 /* USER CODE END Includes */
 
@@ -61,6 +65,7 @@ extern I2C_HandleTypeDef hi2c3;
 extern SPI_HandleTypeDef hspi1;
 
 extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim4;
 extern TIM_HandleTypeDef htim10;
 
 extern UART_HandleTypeDef huart1;
@@ -124,6 +129,10 @@ void Error_Handler(void);
 #define LED_B_On()		        HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_SET)    
 #define LED_B_Off()  	        HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_RESET)     
 #define LED_B_Toggle()          HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin)
+
+//#define BEEP_On()		        HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_SET)    
+//#define BEEP_Off()  	        HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_RESET)     
+//#define BEEP_Toggle()           HAL_GPIO_TogglePin(BEEP_GPIO_Port, BEEP_Pin)
 
 /* USER CODE END Private defines */
 

@@ -19,22 +19,32 @@
  */
 void TIM_Init(void)
 {
+	HAL_TIM_PWM_Start(&btim, BTIM_CHANNEL);
+
 	HAL_TIM_PWM_Start(&xtim, XTIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&xtim, XTIM_CHANNEL_2);
 	HAL_TIM_PWM_Start(&xtim, XTIM_CHANNEL_3);
 	HAL_TIM_PWM_Start(&xtim, XTIM_CHANNEL_4);
-	
 }
 
 /**
- * @brief	PWM占空比设置,周期：20ms,高电平：0.5~2.5ms
+ * @brief	蜂鸣器PWM占空比设置,频率：4000Hz
+ * @param   compare specifies the Capture Compare register new value: 0~21000.
+ */
+void BEEP_Volume(uint16_t compare)
+{
+    __HAL_TIM_SetCompare(&btim, BTIM_CHANNEL, compare);
+}
+
+/**
+ * @brief	PWM占空比设置,周期：20ms,高电平：1~2ms
  * @param  	pwm: 
- * @param  channel TIM Channels to be configured.
+ * @param   channel TIM Channels to be configured.
  *            @arg XTIM_CHANNEL_1: TIM Channel 1 selected
  *            @arg XTIM_CHANNEL_2: TIM Channel 2 selected
  *            @arg XTIM_CHANNEL_3: TIM Channel 3 selected
  *            @arg XTIM_CHANNEL_4: TIM Channel 4 selected
- * @param  compare specifies the Capture Compare register new value: 500~2500.
+ * @param   compare specifies the Capture Compare register new value: 1000~2000.
  */
 void XPWM_Set(uint32_t channel, uint16_t compare)
 {
@@ -77,7 +87,7 @@ void HAL_Delay_us(uint16_t Delay_us)
 }
 
 /**
-  * @简  述  TIM7 更新中断回调函数
+  * @简  述  TIM7 中断回调函数
   * @参  数  无
   * @返回值  无
   */

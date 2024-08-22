@@ -38,6 +38,9 @@ robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+robomaster-c\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 robomaster-c\main.o: ../../../../module/driver/inc/drv_key.h
 robomaster-c\main.o: ../Core/Inc/tp_thread.h
 robomaster-c\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
@@ -66,8 +69,11 @@ robomaster-c\main.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h
 robomaster-c\main.o: ../../../../module/driver/inc/drv_tim.h
 robomaster-c\main.o: ../../../../module/driver/inc/drv_ist8310.h
 robomaster-c\main.o: ../../../../module/driver/inc/drv_bmi088.h
+robomaster-c\main.o: ../../../../module/protocol/inc/prot_ano.h
 robomaster-c\main.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster-c\main.o: ../../../../module/algorithm/inc/algo_pid.h
+robomaster-c\main.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h
+robomaster-c\main.o: ../../../../module/algorithm/inc/algo_remote_ctrl.h
 robomaster-c\main.o: ../Core/Inc/adc.h
 robomaster-c\main.o: ../Core/Inc/can.h
 robomaster-c\main.o: ../Core/Inc/dma.h
@@ -75,4 +81,9 @@ robomaster-c\main.o: ../Core/Inc/i2c.h
 robomaster-c\main.o: ../Core/Inc/spi.h
 robomaster-c\main.o: ../Core/Inc/tim.h
 robomaster-c\main.o: ../Core/Inc/usart.h
+robomaster-c\main.o: ../USB_DEVICE/App/usb_device.h
+robomaster-c\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
+robomaster-c\main.o: ../USB_DEVICE/Target/usbd_conf.h
+robomaster-c\main.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+robomaster-c\main.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\string.h
 robomaster-c\main.o: ../Core/Inc/gpio.h

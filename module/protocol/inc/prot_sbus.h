@@ -10,10 +10,10 @@
 typedef struct
 {
 	uint16_t signal[25];
-	uint16_t ch1;  // 通道1数值
-	uint16_t ch2;  // 通道2数值
-	uint16_t ch3;  // 通道3数值
-	uint16_t ch4;  // 通道4数值
+	uint16_t ch1;  // 通道1数值 ROLL  >
+	uint16_t ch2;  // 通道2数值 PITCH ^
+	uint16_t ch3;  // 通道3数值 THR   ^
+	uint16_t ch4;  // 通道4数值 YAW   >
 	uint16_t ch5;  // 通道5数值
 	uint16_t ch6;  // 通道6数值
 	uint16_t ch7;  // 通道7数值

@@ -37,3 +37,6 @@ robomaster-c\stm32f4xx_hal_pwr_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4
 robomaster-c\stm32f4xx_hal_pwr_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 robomaster-c\stm32f4xx_hal_pwr_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 robomaster-c\stm32f4xx_hal_pwr_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+robomaster-c\stm32f4xx_hal_pwr_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+robomaster-c\stm32f4xx_hal_pwr_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+robomaster-c\stm32f4xx_hal_pwr_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h

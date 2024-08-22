@@ -38,6 +38,9 @@ robomaster-c\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_
 robomaster-c\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 robomaster-c\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 robomaster-c\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+robomaster-c\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+robomaster-c\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+robomaster-c\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/driver/inc/drv_key.h
 robomaster-c\stm32f4xx_hal_msp.o: ../Core/Inc/tp_thread.h
 robomaster-c\stm32f4xx_hal_msp.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
@@ -66,5 +69,8 @@ robomaster-c\stm32f4xx_hal_msp.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\stdio
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/driver/inc/drv_tim.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/driver/inc/drv_ist8310.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/driver/inc/drv_bmi088.h
+robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/protocol/inc/prot_ano.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/algorithm/inc/algo_pid.h
+robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h
+robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/algorithm/inc/algo_remote_ctrl.h
