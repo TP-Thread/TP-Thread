@@ -93,8 +93,8 @@ void Remote_Ctrl(void)
 			else
 			{
 				// 油门校准
-				rc_ctrl.thrust = (sbus_ch.ch3 - 300) * 5.0f / 7.0f + 1000; // 电调极值：1000~2000
-				rc_ctrl.thrust = CONSTRAIN(rc_ctrl.thrust, 1000, 2000);
+				rc_ctrl.thrust = (sbus_ch.ch3 - 300) * 0.7143f + 1000; // 电调极值：1000~2000
+				rc_ctrl.thrust = PWM_LIMIT(rc_ctrl.thrust, 1000, 2000);
 				XPWM_Set(XTIM_CHANNEL_1, rc_ctrl.thrust);
 				XPWM_Set(XTIM_CHANNEL_2, rc_ctrl.thrust);
 				XPWM_Set(XTIM_CHANNEL_3, rc_ctrl.thrust);

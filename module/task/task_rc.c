@@ -21,7 +21,8 @@ void Rc_Entry(void *argument)
 {
     SBUS_Init();
 	TIM_Init();
-
+	AC_PPID_Init();
+	
     while (1)
     {	
 		Remote_Ctrl();

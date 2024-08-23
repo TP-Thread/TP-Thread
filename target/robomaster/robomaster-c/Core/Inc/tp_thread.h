@@ -21,7 +21,8 @@
 
 
 /* Exported macro ------------------------------------------------------------*/
-#define CONSTRAIN(input, min, max)	(input > max ? max : (input < min ? min : input))
+#define ABS_LIMIT(input, mix)			(input > mix ? mix : (input < -mix ? mix : input))
+#define PWM_LIMIT(input, min, max)		(input > max ? max : (input < min ? min : input))
 
 #if defined(TIP)
     #define duart	huart1

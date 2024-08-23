@@ -18,10 +18,10 @@ typedef enum
 
 typedef struct
 {
-	uint16_t thrust;
-	uint16_t roll;
-	uint16_t pitch;
-	uint16_t yaw;
+	float thrust;
+	float roll;
+	float pitch;
+	float yaw;
 } rctrl_t;
 
 typedef struct

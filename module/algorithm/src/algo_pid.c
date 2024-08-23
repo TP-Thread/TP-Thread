@@ -19,7 +19,7 @@
  * @param   imax: pid最大积分输出
  * @param	outmax: pid最大输出
  */
-void PID_Init(pid_t *pid, const float pid_param[3])
+void PID_Init(pid_t *pid, float *pid_param)
 {
 	pid->error = 0;
 	pid->perror = 0;
@@ -30,32 +30,10 @@ void PID_Init(pid_t *pid, const float pid_param[3])
     pid->ki = pid_param[1];
     pid->kd = pid_param[2];
 
-    pid->out = pid->pout = pid->iout = pid->dout = 0.0f;
-
-//    pid->ilimit = imax;
-//    pid->outlimit = outmax;
-}
-
-/**
- * @brief  PID更新输出
- * @param  pid: pid_t结构数据指针
- * @retval pid输出
- */
-float PID_Update(pid_t *pid)
-{
-	pid->perror = pid->error;
-	pid->error = pid->desired - pid->measured;
+    pid->ilimit = pid_param[3];
+    pid->outlimit = pid_param[4];
 	
-	pid->integ += pid->error;
-	pid->deriv = pid->error - pid->perror;
-
-    pid->pout = pid->kp * pid->error;
-    pid->iout += pid->ki * pid->error;
-    pid->dout = pid->kd * pid->deriv;
-
-    pid->out = pid->pout + pid->iout + pid->dout;
-
-    return pid->out;
+    pid->out = pid->pout = pid->iout = pid->dout = 0.0f;
 }
 
 /**
@@ -68,4 +46,29 @@ void PID_Reset(pid_t *pid)
 	pid->perror = 0;
 	pid->integ = 0;
 	pid->deriv = 0;
+}
+
+/**
+ * @brief  PID更新输出
+ * @param  pid: pid_t结构数据指针
+ * @retval pid输出
+ */
+float PID_Calculate(pid_t *pid)
+{
+	pid->perror = pid->error;
+	pid->error = pid->desired - pid->measured;
+	
+	pid->integ += pid->error;
+	pid->deriv = pid->error - pid->perror;
+
+    pid->pout = pid->kp * pid->error;
+    pid->iout += pid->ki * pid->error;
+    pid->dout = pid->kd * pid->deriv;
+	
+	pid->iout = ABS_LIMIT(pid->iout, pid->ilimit);
+
+    pid->out = pid->pout + pid->iout + pid->dout;
+	pid->iout = ABS_LIMIT(pid->out, pid->outlimit);
+
+    return pid->out;
 }

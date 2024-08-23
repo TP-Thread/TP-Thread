@@ -31,8 +31,8 @@ typedef struct
 } pid_t;
 
 /* Exported functions prototypes ---------------------------------------------*/
-void PID_Init(pid_t *pid, const float pid_param[3]);
+void PID_Init(pid_t *pid, float *pid_param);
 void PID_Reset(pid_t *pid);
-float PID_Update(pid_t *pid);
+float PID_Calculate(pid_t *pid);
 
 #endif

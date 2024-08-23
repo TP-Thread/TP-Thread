@@ -102,7 +102,7 @@ void Imu_Temp_Control(pid_t *pid)
     uint16_t tempPWM;
 
 	pid->desired = 40.0f;
-    PID_Update(&temp_pid);
+    PID_Calculate(&temp_pid);
 
     if (temp_pid.out < 0.0f)
     {
