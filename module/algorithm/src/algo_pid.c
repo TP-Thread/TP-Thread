@@ -65,10 +65,10 @@ float PID_Calculate(pid_t *pid)
     pid->iout += pid->ki * pid->error;
     pid->dout = pid->kd * pid->deriv;
 	
-	pid->iout = ABS_LIMIT(pid->iout, pid->ilimit);
+	pid->iout = ABS_MAX_LIMIT(pid->iout, pid->ilimit);
 
     pid->out = pid->pout + pid->iout + pid->dout;
-	pid->iout = ABS_LIMIT(pid->out, pid->outlimit);
+	pid->out = ABS_MAX_LIMIT(pid->out, pid->outlimit);
 
     return pid->out;
 }

@@ -26,7 +26,7 @@ typedef struct
 	float dout;		 //< derivative output
 	float out;
 	
-	float ilimit;	 //< integral limit
+	float ilimit;	 //< limit
 	float outlimit;
 } pid_t;
 

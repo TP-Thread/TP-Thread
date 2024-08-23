@@ -5,6 +5,10 @@
 #include "tp_thread.h"
 
 /* Exported macro ------------------------------------------------------------*/
+#define ch_thrust	sbus_ch.ch3
+#define ch_roll		sbus_ch.ch1
+#define ch_pitch	sbus_ch.ch2
+#define ch_yaw 		sbus_ch.ch4
 
 /* Exported types ------------------------------------------------------------*/
 typedef struct

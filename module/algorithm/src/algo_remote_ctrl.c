@@ -17,15 +17,23 @@ rctrl_t rc_ctrl;
 mctrl_t motor_ctrl;
 
 /* Private functions ---------------------------------------------------------*/
+/**
+ * @brief	Remote control.
+ *			正式起飞前需要进行电调校准，通电后左侧遥杆推至右上角进入电调校准模式
+ *			保持油门通道最高，电调会发出一系列提示音，然后将PWM信号设置为最小值
+ *			电调将发出一组确认音，表示已成功记录油门数值，然后重新连接以保存校准设置。
+ * @param  	argument: Not used
+ * @retval 	None
+ */
 void Remote_Ctrl(void)
 {
 	switch (mav_state) 
 	{
         case DISARMED:
-            if ((sbus_ch.ch3 < 500) && (sbus_ch.ch4 > 1500))
+            if ((ch_thrust < 500) && (ch_yaw > 1500))
 			{
 				osDelay(1000);
-				if ((sbus_ch.ch3 < 500) && (sbus_ch.ch4 > 1500))
+				if ((ch_thrust < 500) && (ch_yaw > 1500))
 				{
 					mav_state = ARMED;
 					BEEP_Volume(20000);
@@ -33,10 +41,10 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
-			else if ((sbus_ch.ch3 > 1500) && (sbus_ch.ch4 > 1500))
+			else if ((ch_thrust > 1500) && (ch_yaw > 1500))
 			{
 				osDelay(1000);
-				if ((sbus_ch.ch3 > 1500) && (sbus_ch.ch4 > 1500))
+				if ((ch_thrust > 1500) && (ch_yaw > 1500))
 				{
 					mav_state = CALIBRATE;
 					BEEP_Volume(10000);
@@ -46,10 +54,10 @@ void Remote_Ctrl(void)
 			}
             break;
         case ARMED:
-            if ((sbus_ch.ch3 < 500) && (sbus_ch.ch4 < 500))
+            if ((ch_thrust < 500) && (ch_yaw < 500))
 			{
 				osDelay(1000);
-				if ((sbus_ch.ch3 < 500) && (sbus_ch.ch4 < 500))
+				if ((ch_thrust < 500) && (ch_yaw < 500))
 				{
 					mav_state = DISARMED;
 					BEEP_Volume(20000);
@@ -59,19 +67,19 @@ void Remote_Ctrl(void)
 			}
 			else
 			{
-				// 控制期望角度
-				angle_d[0] = (sbus_ch.ch1 - 1000) * 0.05;
-				angle_d[1] = (sbus_ch.ch2 - 1000) * 0.05;
+				// 控制期望角度 -35~35°
+				angle_d[0] = (ch_roll - 1000) * 0.05;
+				angle_d[1] = (ch_pitch - 1000) * 0.05;
 				// angle_d[2] = 0;
 
 				Attitude_Ctrl();
 			}
             break;
 		case CALIBRATE:
-            if ((sbus_ch.ch3 < 500) && (sbus_ch.ch4 > 1500))
+            if ((ch_thrust < 500) && (ch_yaw > 1500))
 			{
 				osDelay(1000);
-				if ((sbus_ch.ch3 < 500) && (sbus_ch.ch4 > 1500))
+				if ((ch_thrust < 500) && (ch_yaw > 1500))
 				{
 					mav_state = ARMED;
 					BEEP_Volume(20000);
@@ -79,10 +87,10 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
-			else if ((sbus_ch.ch3 < 500) && (sbus_ch.ch4 < 500))
+			else if ((ch_thrust < 500) && (ch_yaw < 500))
 			{
 				osDelay(1000);
-				if ((sbus_ch.ch3 < 500) && (sbus_ch.ch4 < 500))
+				if ((ch_thrust < 500) && (ch_yaw < 500))
 				{
 					mav_state = DISARMED;
 					BEEP_Volume(20000);
@@ -93,7 +101,7 @@ void Remote_Ctrl(void)
 			else
 			{
 				// 油门校准
-				rc_ctrl.thrust = (sbus_ch.ch3 - 300) * 0.7143f + 1000; // 电调极值：1000~2000
+				rc_ctrl.thrust = (ch_thrust - 300) * 0.7143f + 1000; // 电调极值：1000~2000
 				rc_ctrl.thrust = PWM_LIMIT(rc_ctrl.thrust, 1000, 2000);
 				XPWM_Set(XTIM_CHANNEL_1, rc_ctrl.thrust);
 				XPWM_Set(XTIM_CHANNEL_2, rc_ctrl.thrust);

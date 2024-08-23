@@ -31,9 +31,9 @@ float att_r_pid_param[5] = {5, 0, 0, 200, 200};
 float att_p_pid_param[5] = {5, 0, 0, 200, 200};
 float att_y_pid_param[5] = {5, 0, 0, 200, 200};
 // 角速度PID参数
-float rate_r_pid_param[5] = {0.1, 0, 0.00, 200, 200};
-float rate_p_pid_param[5] = {0.1, 0, 0.00, 200, 200};
-float rate_y_pid_param[5] = {0.1, 0, 0.001, 200, 200};
+float rate_r_pid_param[5] = {0.5, 0, 0.00, 200, 200};
+float rate_p_pid_param[5] = {0.5, 0, 0.00, 200, 200};
+float rate_y_pid_param[5] = {0.1, 0, 0.00, 100, 100};
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -72,45 +72,38 @@ void Attitude_Ctrl(void)
 	rate_r_pid.desired = PID_Calculate(&att_r_pid);
 	rate_p_pid.desired = PID_Calculate(&att_p_pid);
 	// rate_y_pid.desired = PID_Calculate(&att_y_pid);
-	rate_y_pid.desired = (sbus_ch.ch4 - 1000) * 0.1;
+	rate_y_pid.desired = (ch_yaw - 1000) * 0.1;
 
 	// 电机PWM控制分量
-	rc_ctrl.thrust = (sbus_ch.ch3 - 300) * 0.5 + 1000; // 油门分量：1000~1700
+	rc_ctrl.thrust = (ch_thrust - 300) * 0.5 + 1000; // 油门分量：1000~1700
 	rc_ctrl.roll = PID_Calculate(&rate_r_pid);
 	rc_ctrl.pitch = PID_Calculate(&rate_p_pid);
 	rc_ctrl.yaw = PID_Calculate(&rate_y_pid);
 
-//	motor_ctrl.pwm1 = rc_ctrl.thrust - rc_ctrl.roll + rc_ctrl.pitch + rc_ctrl.yaw;
-//	motor_ctrl.pwm2 = rc_ctrl.thrust + rc_ctrl.roll - rc_ctrl.pitch + rc_ctrl.yaw;
-//	motor_ctrl.pwm3 = rc_ctrl.thrust + rc_ctrl.roll + rc_ctrl.pitch - rc_ctrl.yaw;
-//	motor_ctrl.pwm4 = rc_ctrl.thrust - rc_ctrl.roll - rc_ctrl.pitch - rc_ctrl.yaw;
+	motor_ctrl.pwm1 = rc_ctrl.thrust - rc_ctrl.roll + rc_ctrl.pitch + rc_ctrl.yaw;
+	motor_ctrl.pwm2 = rc_ctrl.thrust + rc_ctrl.roll - rc_ctrl.pitch + rc_ctrl.yaw;
+	motor_ctrl.pwm3 = rc_ctrl.thrust + rc_ctrl.roll + rc_ctrl.pitch - rc_ctrl.yaw;
+	motor_ctrl.pwm4 = rc_ctrl.thrust - rc_ctrl.roll - rc_ctrl.pitch - rc_ctrl.yaw;
 
-	printf("att_r_pid.measured: %f\n", att_r_pid.measured);
-	printf("att_r_pid.desired: %f\n", att_r_pid.desired);
-	printf("att_r_pid.out: %f\n", att_r_pid.out);
-	
-	motor_ctrl.pwm1 = rc_ctrl.thrust - rc_ctrl.roll;
-	
+    // 限制PWM信号在合理范围内
+	motor_ctrl.pwm1 = PWM_LIMIT(motor_ctrl.pwm1, 1000, 2000);
+	motor_ctrl.pwm2 = PWM_LIMIT(motor_ctrl.pwm2, 1000, 2000);
+	motor_ctrl.pwm3 = PWM_LIMIT(motor_ctrl.pwm3, 1000, 2000);
+	motor_ctrl.pwm4 = PWM_LIMIT(motor_ctrl.pwm4, 1000, 2000);
 
-//    // 限制PWM信号在合理范围内
-//    motor_ctrl.pwm1 = PWM_LIMIT(motor_ctrl.pwm1, 1000, 2000);
-//	motor_ctrl.pwm2 = PWM_LIMIT(motor_ctrl.pwm2, 1000, 2000);
-//	motor_ctrl.pwm3 = PWM_LIMIT(motor_ctrl.pwm3, 1000, 2000);
-//	motor_ctrl.pwm4 = PWM_LIMIT(motor_ctrl.pwm4, 1000, 2000);
-
-//	// 输出PWM信号到电机
-//	if (motor_ctrl.pwm1 > motor_ctrl.pwm4)
-//	{
-//		XPWM_Set(XTIM_CHANNEL_1, motor_ctrl.pwm1);
-//		XPWM_Set(XTIM_CHANNEL_2, motor_ctrl.pwm2);
-//		XPWM_Set(XTIM_CHANNEL_3, motor_ctrl.pwm3);
-//		XPWM_Set(XTIM_CHANNEL_4, motor_ctrl.pwm4);
-//	}
-//	else
-//	{
-//		XPWM_Set(XTIM_CHANNEL_4, motor_ctrl.pwm4);
-//		XPWM_Set(XTIM_CHANNEL_3, motor_ctrl.pwm3);
-//		XPWM_Set(XTIM_CHANNEL_2, motor_ctrl.pwm2);
-//		XPWM_Set(XTIM_CHANNEL_1, motor_ctrl.pwm1);
-//	}
+	// 输出PWM信号到电机
+	if (motor_ctrl.pwm1 > motor_ctrl.pwm4)
+	{
+		XPWM_Set(XTIM_CHANNEL_1, motor_ctrl.pwm1);
+		XPWM_Set(XTIM_CHANNEL_2, motor_ctrl.pwm2);
+		XPWM_Set(XTIM_CHANNEL_3, motor_ctrl.pwm3);
+		XPWM_Set(XTIM_CHANNEL_4, motor_ctrl.pwm4);
+	}
+	else
+	{
+		XPWM_Set(XTIM_CHANNEL_4, motor_ctrl.pwm4);
+		XPWM_Set(XTIM_CHANNEL_3, motor_ctrl.pwm3);
+		XPWM_Set(XTIM_CHANNEL_2, motor_ctrl.pwm2);
+		XPWM_Set(XTIM_CHANNEL_1, motor_ctrl.pwm1);
+	}
 }

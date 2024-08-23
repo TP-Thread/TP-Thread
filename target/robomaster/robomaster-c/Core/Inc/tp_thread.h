@@ -21,7 +21,8 @@
 
 
 /* Exported macro ------------------------------------------------------------*/
-#define ABS_LIMIT(input, mix)			(input > mix ? mix : (input < -mix ? mix : input))
+#define ABS_MAX_LIMIT(input, max)		(input > max ? max : (input < -max ? max : input))
+#define ABS_MIN_LIMIT(input, min)		(input < min ? 0 : (input > -min ? 0 : input))
 #define PWM_LIMIT(input, min, max)		(input > max ? max : (input < min ? min : input))
 
 #if defined(TIP)
