@@ -72,5 +72,5 @@ robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/driver/inc/drv_bmi088.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/protocol/inc/prot_ano.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/algorithm/inc/algo_pid.h
-robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h
 robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/algorithm/inc/algo_remote_ctrl.h
+robomaster-c\stm32f4xx_hal_msp.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h

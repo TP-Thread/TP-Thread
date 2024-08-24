@@ -11,7 +11,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 
-
 /* Private functions ---------------------------------------------------------*/
 /**
  * @brief  Function implementing the Index thread.
@@ -22,10 +21,9 @@ void Index_Entry(void *argument)
 {
 	while (1)
 	{
-		// LED_G_Toggle();
-		// sent_data1(0, angle_m[1], -100);
-		sent_data1(motor_ctrl.pwm1, motor_ctrl.pwm3, rc_ctrl.roll);
-		// printf("the Yaw value is: %f \n", angle_c[2]);
+		LED_G_Toggle();
+		Sent_ATTitude_Data(angle_m, angle_d, rate_m, rate_d);
+		printf("the Yaw value is \n");
 		// printf("the temp value is: %.2f \n", bmi088_data.temp);
 		
 		osDelay(100);

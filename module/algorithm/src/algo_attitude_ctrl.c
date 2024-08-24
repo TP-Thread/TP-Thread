@@ -15,22 +15,23 @@
 float angle_m[3]; // 测量姿态角 deg
 float angle_d[3]; // 期望姿态角 deg（rp:-35~35°）
 
-float rate_m[3]; // 测量姿态角速度 deg/s
-float rate_d[3]; // 期望姿态角速度 deg/s（rp:-180~180deg/s）
+float rate_m[3]; // 测量姿态角速度 dps
+float rate_d[3]; // 期望姿态角速度 dps（rp:-180~180dps）
 
+// 角度PID
 static pid_t att_r_pid;
 static pid_t att_p_pid;
 static pid_t att_y_pid;
-
+// 角速度PID
 static pid_t rate_r_pid;
 static pid_t rate_p_pid;
 static pid_t rate_y_pid;
 
-// 角度PID参数
+// 角度PID参数：kp ki kd ilimit outlimit
 float att_r_pid_param[5] = {5, 0, 0, 200, 200};
 float att_p_pid_param[5] = {5, 0, 0, 200, 200};
 float att_y_pid_param[5] = {5, 0, 0, 200, 200};
-// 角速度PID参数
+// 角速度PID参数：kp ki kd ilimit outlimit
 float rate_r_pid_param[5] = {0.5, 0, 0.00, 200, 200};
 float rate_p_pid_param[5] = {0.5, 0, 0.00, 200, 200};
 float rate_y_pid_param[5] = {0.1, 0, 0.00, 100, 100};
@@ -41,10 +42,11 @@ float rate_y_pid_param[5] = {0.1, 0, 0.00, 100, 100};
  */
 void AC_PPID_Init(void)
 {
+	// 角度PID参数初始化
 	PID_Init(&att_r_pid, att_r_pid_param);
 	PID_Init(&att_p_pid, att_p_pid_param);
 	PID_Init(&att_y_pid, att_y_pid_param);
-	
+	// 角速度PID参数初始化
 	PID_Init(&rate_r_pid, rate_r_pid_param);
 	PID_Init(&rate_p_pid, rate_p_pid_param);
 	PID_Init(&rate_y_pid, rate_y_pid_param);
@@ -55,24 +57,24 @@ void AC_PPID_Init(void)
  */
 void Attitude_Ctrl(void)
 {
-	// 外环角度测量值
+	// 角度测量值
 	att_r_pid.measured = angle_m[0];
 	att_p_pid.measured = angle_m[1];
 	att_y_pid.measured = angle_m[2];
-	// 内环角速度测量值
+	// 角速度测量值
 	rate_r_pid.measured = rate_m[0];
 	rate_p_pid.measured = rate_m[1];
 	rate_y_pid.measured = rate_m[2];
 
-	// 外环控制角度期望值
+	// 角度期望值
 	att_r_pid.desired = angle_d[0];
 	att_p_pid.desired = angle_d[1];
 	// att_y_pid.desired = angle_d[2];
-	// 内环控制角速度期望值
-	rate_r_pid.desired = PID_Calculate(&att_r_pid);
-	rate_p_pid.desired = PID_Calculate(&att_p_pid);
-	// rate_y_pid.desired = PID_Calculate(&att_y_pid);
-	rate_y_pid.desired = (ch_yaw - 1000) * 0.1;
+	// 角速度期望值
+	rate_r_pid.desired = rate_d[0] = PID_Calculate(&att_r_pid);
+	rate_p_pid.desired = rate_d[1] = PID_Calculate(&att_p_pid);
+	// rate_y_pid.desired = rate_d[2] = PID_Calculate(&att_y_pid);
+	rate_y_pid.desired = rate_d[2] = (ch_yaw - 1000) * 0.1;
 
 	// 电机PWM控制分量
 	rc_ctrl.thrust = (ch_thrust - 300) * 0.5 + 1000; // 油门分量：1000~1700

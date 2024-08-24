@@ -46,6 +46,15 @@
                     "path": "../Core/Src/dma.c"
                   },
                   {
+                    "path": "../Core/Src/i2c.c"
+                  },
+                  {
+                    "path": "../Core/Src/spi.c"
+                  },
+                  {
+                    "path": "../Core/Src/tim.c"
+                  },
+                  {
                     "path": "../Core/Src/usart.c"
                   },
                   {
@@ -59,8 +68,185 @@
                   }
                 ],
                 "folders": []
+              },
+              {
+                "name": "Driver",
+                "files": [
+                  {
+                    "path": "../../../../module/driver/src/drv_key.c"
+                  },
+                  {
+                    "path": "../../../../module/driver/src/drv_exti.c"
+                  },
+                  {
+                    "path": "../../../../module/driver/src/drv_tim.c"
+                  },
+                  {
+                    "path": "../../../../module/driver/src/drv_uart.c"
+                  },
+                  {
+                    "path": "../../../../module/driver/src/drv_ist8310.c"
+                  },
+                  {
+                    "path": "../../../../module/driver/src/drv_bmi088.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "Prot",
+                "files": [
+                  {
+                    "path": "../../../../module/protocol/src/prot_ano.c"
+                  },
+                  {
+                    "path": "../../../../module/protocol/src/prot_sbus.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "Algo",
+                "files": [
+                  {
+                    "path": "../../../../module/algorithm/src/algo_mahony_ahrs.c"
+                  },
+                  {
+                    "path": "../../../../module/algorithm/src/algo_pid.c"
+                  },
+                  {
+                    "path": "../../../../module/algorithm/src/algo_attitude_ctrl.c"
+                  },
+                  {
+                    "path": "../../../../module/algorithm/src/algo_remote_ctrl.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "Task",
+                "files": [
+                  {
+                    "path": "../../../../module/task/task_index.c"
+                  },
+                  {
+                    "path": "../../../../module/task/task_imu.c"
+                  },
+                  {
+                    "path": "../../../../module/task/task_rc.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "USB_DEVICE",
+                "files": [],
+                "folders": [
+                  {
+                    "name": "App",
+                    "files": [
+                      {
+                        "path": "../USB_DEVICE/App/usb_device.c"
+                      },
+                      {
+                        "path": "../USB_DEVICE/App/usbd_desc.c"
+                      },
+                      {
+                        "path": "../USB_DEVICE/App/usbd_cdc_if.c"
+                      }
+                    ],
+                    "folders": []
+                  },
+                  {
+                    "name": "Target",
+                    "files": [
+                      {
+                        "path": "../USB_DEVICE/Target/usbd_conf.c"
+                      }
+                    ],
+                    "folders": []
+                  }
+                ]
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Middlewares",
+        "files": [],
+        "folders": [
+          {
+            "name": "USB_Device_Library",
+            "files": [
+              {
+                "path": "../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c"
+              },
+              {
+                "path": "../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c"
+              },
+              {
+                "path": "../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c"
+              },
+              {
+                "path": "../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "FreeRTOS",
+            "files": [
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/croutine.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/list.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/queue.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/tasks.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/timers.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "SystemView",
+            "files": [
+              {
+                "path": "../Middlewares/Third_Party/SystemView/Src/SEGGER_RTT.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/SystemView/Src/SEGGER_SYSVIEW.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/SystemView/Src/SEGGER_SYSVIEW_Config_FreeRTOS.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/SystemView/Src/SEGGER_SYSVIEW_FreeRTOS.c"
+              }
+            ],
+            "folders": []
           }
         ]
       },
@@ -72,13 +258,13 @@
             "name": "STM32F4xx_HAL_Driver",
             "files": [
               {
-                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c"
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c"
               },
               {
-                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c"
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c"
               },
               {
-                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c"
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c"
               },
               {
                 "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"
@@ -120,7 +306,25 @@
                 "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c"
               },
               {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c"
+              },
+              {
                 "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c"
               },
               {
                 "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c"
@@ -146,48 +350,6 @@
         ]
       },
       {
-        "name": "Middlewares",
-        "files": [],
-        "folders": [
-          {
-            "name": "FreeRTOS",
-            "files": [
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/croutine.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/list.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/queue.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/tasks.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/timers.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c"
-              },
-              {
-                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c"
-              }
-            ],
-            "folders": []
-          }
-        ]
-      },
-      {
         "name": "::CMSIS",
         "files": [],
         "folders": []
@@ -198,7 +360,7 @@
   "deviceName": null,
   "packDir": null,
   "miscInfo": {
-    "uid": "672e09459e1b8d5992c2969f711d2bbe"
+    "uid": "532f35b67adb236e4b62a659aa2bbed3"
   },
   "targets": {
     "robomaster-c": {
@@ -336,11 +498,19 @@
           "../Core/Inc",
           "../Drivers/STM32F4xx_HAL_Driver/Inc",
           "../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
-          "../Middlewares/Third_Party/FreeRTOS/Source/include",
-          "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
-          "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F",
           "../Drivers/CMSIS/Device/ST/STM32F4xx/Include",
           "../Drivers/CMSIS/Include",
+          "../Middlewares/ST/STM32_USB_Device_Library/Core/Inc",
+          "../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc",
+          "../Middlewares/Third_Party/FreeRTOS/Source/include",
+          "../USB_DEVICE/App",
+          "../USB_DEVICE/Target",
+          "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+          "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F",
+          "../Middlewares/Third_Party/SystemView/Inc",
+          "../../../../module/driver/inc",
+          "../../../../module/protocol/inc",
+          "../../../../module/algorithm/inc",
           "RTE/_robomaster-c"
         ],
         "libList": [],
@@ -348,8 +518,31 @@
           "USE_HAL_DRIVER",
           "STM32F407xx"
         ]
+      },
+      "builderOptions": {
+        "AC5": {
+          "version": 4,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": true,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-3",
+            "one-elf-section-per-function": true,
+            "c99-mode": true,
+            "C_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "CXX_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "warnings": "all-warnings"
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf"
+          }
+        }
       }
     }
   },
-  "version": "3.4"
+  "version": "3.5"
 }

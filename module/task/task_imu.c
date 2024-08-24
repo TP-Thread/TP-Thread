@@ -14,24 +14,19 @@
 
 /* Private includes ----------------------------------------------------------*/
 #include "algo_mahony_ahrs.h"
-#include "math.h"
 
 /* Private macro -------------------------------------------------------------*/
 #define INT_EVENT (0x01 << 0) // 设置事件掩码的位 0
 #define FIN_EVENT (0x01 << 1) // 设置事件掩码的位 1
 
-#define TEMP_KP 1600.0f // 温度控制PID的kp
-#define TEMP_KI 0.2f    // 温度控制PID的ki
-#define TEMP_KD 0.0f    // 温度控制PID的kd
-
-#define TEMP_MAX_OUT 4500.0f  // 温度控制PID的max_out
-#define TEMP_MAX_IOUT 4400.0f // 温度控制PID的max_iout
-
 /* Private variables ---------------------------------------------------------*/
 extern osEventFlagsId_t Imu_EventHandle;
 
-pid_t temp_pid;
-float temp_pid_param[3] = {TEMP_KP, TEMP_KI, TEMP_KD};
+// IMU温度PID
+static pid_t temp_pid;
+
+// IMU温度PID参数：kp ki kd ilimit outlimit
+float temp_pid_param[5] = {1600, 0.1, 0, 4400, 4500};
 
 /* Private function prototypes -----------------------------------------------*/
 void Imu_Temp_Control(pid_t *pid);
@@ -75,13 +70,18 @@ void Imu_Entry(void *argument)
     }
 }
 
+/**
+ * @brief	更新四元数
+ */
 void Quaternion_Update(float gyro[3], float accel[3], float mag[3])
 {
     MahonyAHRSupdate(gyro[0], gyro[1], gyro[2], accel[0], accel[1], accel[2], mag[0], mag[1], mag[2]);
     // MahonyAHRSupdateIMU(gyro[0], gyro[1], gyro[2], accel[0], accel[1], accel[2]);
 }
 
-// 测量当前姿态角、角速度
+/**
+ * @brief	测量当前姿态角、角速度
+ */
 void Attitude_Get(float *angle, float *rate)
 {
     angle[0] = atan2f(2.0f * (q0 * q1 + q2 * q3), 1.0f - 2.0f * (q1 * q1 + q2 * q2)) * 57.3f;
@@ -99,7 +99,7 @@ void Attitude_Get(float *angle, float *rate)
  */
 void Imu_Temp_Control(pid_t *pid)
 {
-    uint16_t tempPWM;
+    static uint16_t tempPWM;
 
 	pid->desired = 40.0f;
     PID_Calculate(&temp_pid);
@@ -109,7 +109,7 @@ void Imu_Temp_Control(pid_t *pid)
         temp_pid.out = 0.0f;
     }
 
-    tempPWM = (uint16_t)temp_pid.out;
+    tempPWM = temp_pid.out;
     __HAL_TIM_SetCompare(&ttim, TTIM_CHANNEL, tempPWM);
 }
 

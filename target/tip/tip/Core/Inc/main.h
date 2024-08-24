@@ -32,14 +32,19 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "drv_key.h"
+#include "drv_exti.h"
 #include "drv_uart.h"
-//#include "bsp_tim.h" 
-//#include "bsp_beep.h"
-//#include "bsp_vin.h"
-//#include "bsp_oled.h"
-//#include "bsp_can.h"
+#include "drv_tim.h" 
+#include "drv_ist8310.h"
+#include "drv_bmi088.h"
 
+#include "prot_ano.h"
 #include "prot_sbus.h"
+
+#include "algo_pid.h"
+#include "algo_remote_ctrl.h"
+#include "algo_attitude_ctrl.h"
+// #include "algo_position_ctrl.h"
 
 /* USER CODE END Includes */
 
@@ -47,12 +52,22 @@ extern "C" {
 /* USER CODE BEGIN ET */
 extern ADC_HandleTypeDef hadc1;
 extern ADC_HandleTypeDef hadc3;
-// extern CAN_HandleTypeDef hcan1;
+
+extern CAN_HandleTypeDef hcan1;
 // extern CAN_HandleTypeDef hcan2;
+
+extern I2C_HandleTypeDef hi2c3;
+
+extern SPI_HandleTypeDef hspi1;
+
+extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim10;
+
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart3;
-extern UART_HandleTypeDef huart6;
 extern DMA_HandleTypeDef hdma_usart3_rx;
+extern UART_HandleTypeDef huart6;
 
 /* USER CODE END ET */
 
@@ -75,14 +90,28 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define RSTN_MAG_Pin GPIO_PIN_6
+#define RSTN_MAG_GPIO_Port GPIOG
 #define LED_R_Pin GPIO_PIN_12
 #define LED_R_GPIO_Port GPIOH
+#define DRDY_MAG_Pin GPIO_PIN_3
+#define DRDY_MAG_GPIO_Port GPIOG
+#define DRDY_MAG_EXTI_IRQn EXTI3_IRQn
 #define LED_G_Pin GPIO_PIN_11
 #define LED_G_GPIO_Port GPIOH
 #define LED_B_Pin GPIO_PIN_10
 #define LED_B_GPIO_Port GPIOH
 #define KEY_Pin GPIO_PIN_0
 #define KEY_GPIO_Port GPIOA
+#define CS1_ACCEL_Pin GPIO_PIN_4
+#define CS1_ACCEL_GPIO_Port GPIOA
+#define INT1_ACCEL_Pin GPIO_PIN_4
+#define INT1_ACCEL_GPIO_Port GPIOC
+#define INT1_GYRO_Pin GPIO_PIN_5
+#define INT1_GYRO_GPIO_Port GPIOC
+#define INT1_GYRO_EXTI_IRQn EXTI9_5_IRQn
+#define CS1_GYRO_Pin GPIO_PIN_0
+#define CS1_GYRO_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 #define LED_R_On()              HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_SET)    
@@ -96,6 +125,10 @@ void Error_Handler(void);
 #define LED_B_On()		        HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_SET)    
 #define LED_B_Off()  	        HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_RESET)     
 #define LED_B_Toggle()          HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin)
+
+//#define BEEP_On()		        HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_SET)    
+//#define BEEP_Off()  	        HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_RESET)     
+//#define BEEP_Toggle()           HAL_GPIO_TogglePin(BEEP_GPIO_Port, BEEP_Pin)
 
 /* USER CODE END Private defines */
 

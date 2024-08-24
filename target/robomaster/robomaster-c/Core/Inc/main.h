@@ -35,10 +35,6 @@ extern "C" {
 #include "drv_exti.h"
 #include "drv_uart.h"
 #include "drv_tim.h" 
-// #include "bsp_beep.h"
-// #include "bsp_vin.h"
-// #include "bsp_oled.h"
-// #include "bsp_can.h"
 #include "drv_ist8310.h"
 #include "drv_bmi088.h"
 
@@ -46,9 +42,9 @@ extern "C" {
 #include "prot_sbus.h"
 
 #include "algo_pid.h"
+#include "algo_remote_ctrl.h"
 #include "algo_attitude_ctrl.h"
 // #include "algo_position_ctrl.h"
-#include "algo_remote_ctrl.h"
 
 /* USER CODE END Includes */
 

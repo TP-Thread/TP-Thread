@@ -10,8 +10,8 @@
 extern float angle_m[3]; // 测量姿态角 deg
 extern float angle_d[3]; // 期望姿态角 deg
 
-extern float rate_m[3]; // 测量姿态角速度 deg/s
-extern float rate_d[3]; // 期望姿态角速度 deg/s
+extern float rate_m[3]; // 测量姿态角速度 dps
+extern float rate_d[3]; // 期望姿态角速度 dps
 
 /* Exported functions prototypes ---------------------------------------------*/
 void AC_PPID_Init(void);

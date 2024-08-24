@@ -40,10 +40,10 @@ void BEEP_Volume(uint16_t compare)
  * @brief	PWM占空比设置,周期：20ms,高电平：1~2ms
  * @param  	pwm: 
  * @param   channel TIM Channels to be configured.
- *            @arg XTIM_CHANNEL_1: TIM Channel 1 selected
- *            @arg XTIM_CHANNEL_2: TIM Channel 2 selected
- *            @arg XTIM_CHANNEL_3: TIM Channel 3 selected
- *            @arg XTIM_CHANNEL_4: TIM Channel 4 selected
+ *          @arg XTIM_CHANNEL_1: TIM Channel 1 selected
+ *          @arg XTIM_CHANNEL_2: TIM Channel 2 selected
+ *          @arg XTIM_CHANNEL_3: TIM Channel 3 selected
+ *          @arg XTIM_CHANNEL_4: TIM Channel 4 selected
  * @param   compare specifies the Capture Compare register new value: 1000~2000.
  */
 void XPWM_Set(uint32_t channel, uint16_t compare)

@@ -74,7 +74,7 @@ const osThreadAttr_t Rc_attributes = {
 osThreadId_t ImuHandle;
 const osThreadAttr_t Imu_attributes = {
   .name = "Imu",
-  .stack_size = 1024 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityRealtime,
 };
 /* Definitions for Imu_Event */

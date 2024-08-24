@@ -77,8 +77,8 @@ robomaster-c\usb_device.o: ../../../../module/driver/inc/drv_bmi088.h
 robomaster-c\usb_device.o: ../../../../module/protocol/inc/prot_ano.h
 robomaster-c\usb_device.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster-c\usb_device.o: ../../../../module/algorithm/inc/algo_pid.h
-robomaster-c\usb_device.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h
 robomaster-c\usb_device.o: ../../../../module/algorithm/inc/algo_remote_ctrl.h
+robomaster-c\usb_device.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h
 robomaster-c\usb_device.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
 robomaster-c\usb_device.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 robomaster-c\usb_device.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h

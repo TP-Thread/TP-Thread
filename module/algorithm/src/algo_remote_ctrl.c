@@ -12,9 +12,9 @@
 /* Private macro -------------------------------------------------------------*/
 
 /* Private variables ---------------------------------------------------------*/
-state_e mav_state = DISARMED;
-rctrl_t rc_ctrl;
-mctrl_t motor_ctrl;
+state_e mav_state = DISARMED;	// 无人机当前状态
+rctrl_t rc_ctrl;	// 电机控制分量
+mctrl_t motor_ctrl;	// 电机PWM控制量
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -29,8 +29,8 @@ void Remote_Ctrl(void)
 {
 	switch (mav_state) 
 	{
-        case DISARMED:
-            if ((ch_thrust < 500) && (ch_yaw > 1500))
+        case DISARMED:    // 锁定模式
+            if ((ch_thrust < 500) && (ch_yaw > 1500)) // 解锁
 			{
 				osDelay(1000);
 				if ((ch_thrust < 500) && (ch_yaw > 1500))
@@ -41,7 +41,7 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
-			else if ((ch_thrust > 1500) && (ch_yaw > 1500))
+			else if ((ch_thrust > 1500) && (ch_yaw > 1500)) // 校准油门
 			{
 				osDelay(1000);
 				if ((ch_thrust > 1500) && (ch_yaw > 1500))
@@ -53,8 +53,8 @@ void Remote_Ctrl(void)
 				}
 			}
             break;
-        case ARMED:
-            if ((ch_thrust < 500) && (ch_yaw < 500))
+        case ARMED:    // 解锁模式
+            if ((ch_thrust < 500) && (ch_yaw < 500)) // 锁定
 			{
 				osDelay(1000);
 				if ((ch_thrust < 500) && (ch_yaw < 500))
@@ -65,9 +65,9 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
-			else
+			else // 遥控
 			{
-				// 控制期望角度 -35~35°
+				// 期望角度 -35~35°
 				angle_d[0] = (ch_roll - 1000) * 0.05;
 				angle_d[1] = (ch_pitch - 1000) * 0.05;
 				// angle_d[2] = 0;
@@ -75,8 +75,8 @@ void Remote_Ctrl(void)
 				Attitude_Ctrl();
 			}
             break;
-		case CALIBRATE:
-            if ((ch_thrust < 500) && (ch_yaw > 1500))
+		case CALIBRATE:    // 校准模式
+            if ((ch_thrust < 500) && (ch_yaw > 1500)) // 解锁
 			{
 				osDelay(1000);
 				if ((ch_thrust < 500) && (ch_yaw > 1500))
@@ -87,7 +87,7 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
-			else if ((ch_thrust < 500) && (ch_yaw < 500))
+			else if ((ch_thrust < 500) && (ch_yaw < 500)) // 锁定
 			{
 				osDelay(1000);
 				if ((ch_thrust < 500) && (ch_yaw < 500))
@@ -98,9 +98,8 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
-			else
+			else // 油门校准
 			{
-				// 油门校准
 				rc_ctrl.thrust = (ch_thrust - 300) * 0.7143f + 1000; // 电调极值：1000~2000
 				rc_ctrl.thrust = PWM_LIMIT(rc_ctrl.thrust, 1000, 2000);
 				XPWM_Set(XTIM_CHANNEL_1, rc_ctrl.thrust);

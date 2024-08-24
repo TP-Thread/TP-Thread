@@ -72,7 +72,7 @@ robomaster-c\task_imu.o: ../../../../module/driver/inc/drv_bmi088.h
 robomaster-c\task_imu.o: ../../../../module/protocol/inc/prot_ano.h
 robomaster-c\task_imu.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster-c\task_imu.o: ../../../../module/algorithm/inc/algo_pid.h
-robomaster-c\task_imu.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h
 robomaster-c\task_imu.o: ../../../../module/algorithm/inc/algo_remote_ctrl.h
+robomaster-c\task_imu.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h
 robomaster-c\task_imu.o: ../../../../module/algorithm/inc/algo_mahony_ahrs.h
 robomaster-c\task_imu.o: D:\EIDE\MDK-ARM\ARM\ARMCC\Bin\..\include\math.h

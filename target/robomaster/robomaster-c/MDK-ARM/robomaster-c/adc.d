@@ -73,5 +73,5 @@ robomaster-c\adc.o: ../../../../module/driver/inc/drv_bmi088.h
 robomaster-c\adc.o: ../../../../module/protocol/inc/prot_ano.h
 robomaster-c\adc.o: ../../../../module/protocol/inc/prot_sbus.h
 robomaster-c\adc.o: ../../../../module/algorithm/inc/algo_pid.h
-robomaster-c\adc.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h
 robomaster-c\adc.o: ../../../../module/algorithm/inc/algo_remote_ctrl.h
+robomaster-c\adc.o: ../../../../module/algorithm/inc/algo_attitude_ctrl.h

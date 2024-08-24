@@ -13,7 +13,6 @@
  */
 
 #include "algo_mahony_ahrs.h"
-#include <math.h>
 
 #define sampleFreq 1000.0f	   // sample frequency in Hz
 #define twoKpDef (2.0f * 0.5f) // 2 * proportional gain
