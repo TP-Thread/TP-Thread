@@ -21,5 +21,6 @@
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Sent_ATTitude_Data(float *angle_data_m, float *angle_data_d, float *rate_data_m, float *rate_data_d);
+void Sent_Motor_Data(uint16_t *motor_data_pwm);
 
 #endif

@@ -13,8 +13,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 state_e mav_state = DISARMED;	// 无人机当前状态
-rctrl_t rc_ctrl;	// 电机控制分量
-mctrl_t motor_ctrl;	// 电机PWM控制量
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -27,13 +25,15 @@ mctrl_t motor_ctrl;	// 电机PWM控制量
  */
 void Remote_Ctrl(void)
 {
+	rctrl_t act_ctrl;	// 控制分量
+	
 	switch (mav_state) 
 	{
         case DISARMED:    // 锁定模式
-            if ((ch_thrust < 500) && (ch_yaw > 1500)) // 解锁
+            if ((ch_thrust < 500) && (ch_yaw < 500)) // 解锁
 			{
 				osDelay(1000);
-				if ((ch_thrust < 500) && (ch_yaw > 1500))
+				if ((ch_thrust < 500) && (ch_yaw < 500))
 				{
 					mav_state = ARMED;
 					BEEP_Volume(20000);
@@ -52,12 +52,21 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
+			else // 停止PWM输出
+			{
+				// printf("DISARMED\n");
+				act_ctrl.thrust = 0;
+				act_ctrl.roll = 0;
+				act_ctrl.pitch = 0;
+				act_ctrl.yaw = 0;
+				Mixer_Ctrl(&act_ctrl);
+			}
             break;
-        case ARMED:    // 解锁模式
-            if ((ch_thrust < 500) && (ch_yaw < 500)) // 锁定
+        case ARMED:    // 解锁模式	
+            if ((ch_thrust < 500) && (ch_yaw > 1500)) // 锁定
 			{
 				osDelay(1000);
-				if ((ch_thrust < 500) && (ch_yaw < 500))
+				if ((ch_thrust < 500) && (ch_yaw > 1500))
 				{
 					mav_state = DISARMED;
 					BEEP_Volume(20000);
@@ -65,21 +74,40 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
-			else // 遥控
+			else if(ch_kill > 1500) // 停止PWM输出
 			{
-				// 期望角度 -35~35°
+				// printf("KILL\n");
+				act_ctrl.thrust = 0;
+				act_ctrl.roll = 0;
+				act_ctrl.pitch = 0;
+				act_ctrl.yaw = 0;
+				Mixer_Ctrl(&act_ctrl);
+			}
+			else if(ch_mode < 500) // 自稳模式
+			{
+				//printf("STABILIZE\n");
+				act_ctrl.thrust = (ch_thrust - 300) * 0.5 + 1000; // 油门分量：1000~1700
 				angle_d[0] = (ch_roll - 1000) * 0.05;
 				angle_d[1] = (ch_pitch - 1000) * 0.05;
-				// angle_d[2] = 0;
+				rate_d[2] = (ch_yaw - 1000) * 0.1;
 
-				Attitude_Ctrl();
+				Attitude_Ctrl(&act_ctrl);
+			}
+			else
+			{
+				// printf("UNKNOWN\n");
+				act_ctrl.thrust = 0;
+				act_ctrl.roll = 0;
+				act_ctrl.pitch = 0;
+				act_ctrl.yaw = 0;
+				Mixer_Ctrl(&act_ctrl);
 			}
             break;
 		case CALIBRATE:    // 校准模式
-            if ((ch_thrust < 500) && (ch_yaw > 1500)) // 解锁
+            if ((ch_thrust < 500) && (ch_yaw < 500)) // 解锁
 			{
 				osDelay(1000);
-				if ((ch_thrust < 500) && (ch_yaw > 1500))
+				if ((ch_thrust < 500) && (ch_yaw < 500))
 				{
 					mav_state = ARMED;
 					BEEP_Volume(20000);
@@ -87,10 +115,10 @@ void Remote_Ctrl(void)
 					BEEP_Volume(0);
 				}
 			}
-			else if ((ch_thrust < 500) && (ch_yaw < 500)) // 锁定
+			else if ((ch_thrust < 500) && (ch_yaw > 1500)) // 锁定
 			{
 				osDelay(1000);
-				if ((ch_thrust < 500) && (ch_yaw < 500))
+				if ((ch_thrust < 500) && (ch_yaw > 1500))
 				{
 					mav_state = DISARMED;
 					BEEP_Volume(20000);
@@ -100,16 +128,13 @@ void Remote_Ctrl(void)
 			}
 			else // 油门校准
 			{
-				rc_ctrl.thrust = (ch_thrust - 300) * 0.7143f + 1000; // 电调极值：1000~2000
-				rc_ctrl.thrust = PWM_LIMIT(rc_ctrl.thrust, 1000, 2000);
-				XPWM_Set(XTIM_CHANNEL_1, rc_ctrl.thrust);
-				XPWM_Set(XTIM_CHANNEL_2, rc_ctrl.thrust);
-				XPWM_Set(XTIM_CHANNEL_3, rc_ctrl.thrust);
-				XPWM_Set(XTIM_CHANNEL_4, rc_ctrl.thrust);
+				// printf("CALIBRATE\n");
+				act_ctrl.thrust = (ch_thrust - 300) * 0.7143f + 1000;
+				act_ctrl.roll = 0;
+				act_ctrl.pitch = 0;
+				act_ctrl.yaw = 0;
+				Mixer_Ctrl(&act_ctrl);
 			}
-            break;
-        case STABILIZE:
-            printf("Flight Mode: STABILIZE\n");
             break;
         default:
             printf("Flight Mode: UNKNOWN\n");

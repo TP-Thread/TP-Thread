@@ -25,13 +25,6 @@
 #define SBUS_SCALE_FACTOR 	0.71428
 #define SBUS_CONNECT_FLAG 	0x00 // flag位标志字节在AT9S遥控器连通时为 0x00
 
-// 定义四个摇杆与拨动开关的功能
-#define ROLL 				1
-#define PITCH 				2
-#define THROTTLE 			3
-#define YAW 				4
-// #define CONTROL_MODE 6
-
 /* Private variables ---------------------------------------------------------*/
 uint8_t sbus_buf[25]; 
 uint8_t sbus_state;	  // 遥控器与接收器连接状态 0=未连接，1=正常连接

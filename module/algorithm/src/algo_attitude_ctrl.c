@@ -18,6 +18,8 @@ float angle_d[3]; // 期望姿态角 deg（rp:-35~35°）
 float rate_m[3]; // 测量姿态角速度 dps
 float rate_d[3]; // 期望姿态角速度 dps（rp:-180~180dps）
 
+uint16_t motor_pwm[4];	// 四个电机的PWM控制量
+
 // 角度PID
 static pid_t att_r_pid;
 static pid_t att_p_pid;
@@ -53,9 +55,9 @@ void AC_PPID_Init(void)
 }
 
 /**
- * @brief	姿态环P-PID控制
+ * @brief	姿态环P-PID控制，输出控制器分量
  */
-void Attitude_Ctrl(void)
+void Attitude_Ctrl(rctrl_t *act_control)
 {
 	// 角度测量值
 	att_r_pid.measured = angle_m[0];
@@ -74,38 +76,45 @@ void Attitude_Ctrl(void)
 	rate_r_pid.desired = rate_d[0] = PID_Calculate(&att_r_pid);
 	rate_p_pid.desired = rate_d[1] = PID_Calculate(&att_p_pid);
 	// rate_y_pid.desired = rate_d[2] = PID_Calculate(&att_y_pid);
-	rate_y_pid.desired = rate_d[2] = (ch_yaw - 1000) * 0.1;
+	rate_y_pid.desired = rate_d[2];
 
 	// 电机PWM控制分量
-	rc_ctrl.thrust = (ch_thrust - 300) * 0.5 + 1000; // 油门分量：1000~1700
-	rc_ctrl.roll = PID_Calculate(&rate_r_pid);
-	rc_ctrl.pitch = PID_Calculate(&rate_p_pid);
-	rc_ctrl.yaw = PID_Calculate(&rate_y_pid);
+	act_control->roll = PID_Calculate(&rate_r_pid);
+	act_control->pitch = PID_Calculate(&rate_p_pid);
+	act_control->yaw = PID_Calculate(&rate_y_pid);
+	
+	Mixer_Ctrl(act_control);
+}
 
-	motor_ctrl.pwm1 = rc_ctrl.thrust - rc_ctrl.roll + rc_ctrl.pitch + rc_ctrl.yaw;
-	motor_ctrl.pwm2 = rc_ctrl.thrust + rc_ctrl.roll - rc_ctrl.pitch + rc_ctrl.yaw;
-	motor_ctrl.pwm3 = rc_ctrl.thrust + rc_ctrl.roll + rc_ctrl.pitch - rc_ctrl.yaw;
-	motor_ctrl.pwm4 = rc_ctrl.thrust - rc_ctrl.roll - rc_ctrl.pitch - rc_ctrl.yaw;
+/**
+ * @brief	混控输出
+ */
+void Mixer_Ctrl(rctrl_t *act_control)
+{
+	motor_pwm[0] = act_control->thrust - act_control->roll + act_control->pitch + act_control->yaw;
+	motor_pwm[1] = act_control->thrust + act_control->roll - act_control->pitch + act_control->yaw;
+	motor_pwm[2] = act_control->thrust + act_control->roll + act_control->pitch - act_control->yaw;
+	motor_pwm[3] = act_control->thrust - act_control->roll - act_control->pitch - act_control->yaw;
 
     // 限制PWM信号在合理范围内
-	motor_ctrl.pwm1 = PWM_LIMIT(motor_ctrl.pwm1, 1000, 2000);
-	motor_ctrl.pwm2 = PWM_LIMIT(motor_ctrl.pwm2, 1000, 2000);
-	motor_ctrl.pwm3 = PWM_LIMIT(motor_ctrl.pwm3, 1000, 2000);
-	motor_ctrl.pwm4 = PWM_LIMIT(motor_ctrl.pwm4, 1000, 2000);
-
+	motor_pwm[0] = PWM_LIMIT(motor_pwm[0], 1000, 2000);
+	motor_pwm[1] = PWM_LIMIT(motor_pwm[1], 1000, 2000);
+	motor_pwm[2] = PWM_LIMIT(motor_pwm[2], 1000, 2000);
+	motor_pwm[3] = PWM_LIMIT(motor_pwm[3], 1000, 2000);
+	
 	// 输出PWM信号到电机
-	if (motor_ctrl.pwm1 > motor_ctrl.pwm4)
+	if (motor_pwm[0] > motor_pwm[3])
 	{
-		XPWM_Set(XTIM_CHANNEL_1, motor_ctrl.pwm1);
-		XPWM_Set(XTIM_CHANNEL_2, motor_ctrl.pwm2);
-		XPWM_Set(XTIM_CHANNEL_3, motor_ctrl.pwm3);
-		XPWM_Set(XTIM_CHANNEL_4, motor_ctrl.pwm4);
+		XPWM_Set(XTIM_CHANNEL_1, motor_pwm[0]);
+		XPWM_Set(XTIM_CHANNEL_2, motor_pwm[1]);
+		XPWM_Set(XTIM_CHANNEL_3, motor_pwm[2]);
+		XPWM_Set(XTIM_CHANNEL_4, motor_pwm[3]);
 	}
 	else
 	{
-		XPWM_Set(XTIM_CHANNEL_4, motor_ctrl.pwm4);
-		XPWM_Set(XTIM_CHANNEL_3, motor_ctrl.pwm3);
-		XPWM_Set(XTIM_CHANNEL_2, motor_ctrl.pwm2);
-		XPWM_Set(XTIM_CHANNEL_1, motor_ctrl.pwm1);
+		XPWM_Set(XTIM_CHANNEL_4, motor_pwm[3]);
+		XPWM_Set(XTIM_CHANNEL_3, motor_pwm[2]);
+		XPWM_Set(XTIM_CHANNEL_2, motor_pwm[1]);
+		XPWM_Set(XTIM_CHANNEL_1, motor_pwm[0]);
 	}
 }
